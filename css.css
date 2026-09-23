@@ -6,6 +6,91 @@
   src: url("") format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
+
+/* Homepage copy, spacing, and link-arrow refinements */
+.div-block-182 .ag-hero-note {
+  display: none !important;
+}
+
+.about-me .text-block-30 {
+  width: 42rem !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.about-me .text-block-30::after {
+  content: "Помогаю превращать сложные задачи в понятные цифровые продукты: разбираю пользовательские сценарии, продумываю структуру, собираю прототипы и довожу интерфейс до цельного визуального языка.";
+  display: block;
+  color: #373737;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.about-me .text-block-31 {
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.about-me .text-block-31::after {
+  content: "Опыт в дизайне — с 2021 года.";
+  display: block;
+  color: #5855b9;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.about-me {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.cta-link {
+  gap: .14em !important;
+}
+
+.cta-link::after {
+  font-size: .64em !important;
+  transform: translate(-1px, -.04em) !important;
+}
+
+.cta-link:hover::after {
+  transform: translate(0, -.04em) !important;
+}
+
+.cta-link.cta-external::after {
+  font-size: .5em !important;
+  transform: translate(-1px, -.01em) !important;
+}
+
+.cta-link.cta-external:hover::after {
+  transform: translate(0, -.01em) !important;
+}
+
+@media screen and (max-width: 991px) {
+  .about-me .text-block-30 {
+    width: 15rem !important;
+  }
+
+  .about-me .text-block-30::after {
+    font-size: .5rem;
+    line-height: .7rem;
+  }
+
+  .about-me .text-block-31::after {
+    font-size: .5rem;
+    line-height: .6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me {
+    padding: 3rem 1.5rem 4rem !important;
+  }
+}
 /* cyrillic */
 @font-face {
   font-family: 'Inter Tight';
