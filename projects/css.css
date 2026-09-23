@@ -1282,3 +1282,199 @@
   src: url("Yq6W-LOTXCb04q32xlpwu8ZfvRIkSQ.woff2") format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+/* Final project grid reset: keep every card in the same responsive system. */
+.projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  width: calc(100% - 6.25rem) !important;
+  max-width: 84rem !important;
+  height: auto !important;
+  margin: 0 auto 4rem !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  align-items: stretch !important;
+}
+
+.projects-grid > *,
+.projects-grid > .w-inline-block,
+.projects-grid > .new-project-card {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+}
+
+.projects-grid > * > div,
+.projects-grid > .new-project-card {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 1.28 !important;
+  overflow: hidden !important;
+  border-radius: 1rem !important;
+  background: #0b0b30 !important;
+  box-sizing: border-box !important;
+}
+
+.projects-grid > * > div > img,
+.projects-grid > .new-project-card > img {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Titles stay available in the markup but are hidden until the copy is final. */
+.projects-grid .header-1,
+.projects-grid .text-block-98,
+.projects-grid .new-project-title {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+    gap: 1rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .projects-grid > * > div,
+  .projects-grid > .new-project-card {
+    aspect-ratio: 1.12 !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .projects-grid {
+    width: calc(100% - 1.5rem) !important;
+    gap: 0.75rem !important;
+  }
+}
+
+/* Rebuilt project grid: one predictable card system for desktop and mobile. */
+.projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  grid-auto-rows: auto !important;
+  column-gap: 1rem !important;
+  row-gap: 1rem !important;
+  width: calc(100% - 6.25rem) !important;
+  max-width: 84rem !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 auto 4rem !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+}
+
+.projects-grid > a,
+.projects-grid > .new-project-card {
+  display: block !important;
+  float: none !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-self: stretch !important;
+  box-sizing: border-box !important;
+}
+
+.projects-grid > a > div,
+.projects-grid > .new-project-card {
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 1.28 !important;
+  overflow: hidden !important;
+  border-radius: 1rem !important;
+  background: #f0f0f0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+}
+
+.projects-grid > a > div > img,
+.projects-grid > .new-project-card > img {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.projects-grid > a > div > .header-1,
+.projects-grid > a > div > .text-block-98,
+.projects-grid > .new-project-card > .new-project-title {
+  display: none !important;
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    width: calc(100% - 2rem) !important;
+    gap: 1rem !important;
+  }
+
+  .projects-grid > a > div,
+  .projects-grid > .new-project-card {
+    aspect-ratio: 1.2 !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .projects-grid {
+    width: calc(100% - 1.5rem) !important;
+    gap: 0.75rem !important;
+  }
+
+  .projects-grid > a > div,
+  .projects-grid > .new-project-card {
+    aspect-ratio: 1.1 !important;
+  }
+}
