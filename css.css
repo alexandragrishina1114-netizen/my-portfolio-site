@@ -1293,8 +1293,8 @@
 
 /* Cases on the home page. */
 .home-projects-section {
-  width: auto !important;
-  margin: 2rem 3.125rem 2rem !important;
+  width: calc(100% - 6.25rem) !important;
+  margin: 2rem auto 2rem !important;
   box-sizing: border-box !important;
   scroll-margin-top: 7rem !important;
 }
@@ -1412,9 +1412,9 @@
 }
 
 @media screen and (max-width: 767px) {
-  .home-projects-section {
-    width: auto !important;
-    margin: 1rem 0.5rem 2rem !important;
+.home-projects-section {
+    width: calc(100% - 1rem) !important;
+    margin: 1rem auto 2rem !important;
   }
 
   .projects-grid {
