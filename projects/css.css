@@ -1706,3 +1706,18 @@ html {
     font-size: 0.74rem !important;
   }
 }
+
+/* Keep the desktop header in its full navigation layout. */
+@media screen and (min-width: 768px) {
+  .menu-button-4 {
+    display: none !important;
+  }
+
+  .link-block-9 {
+    display: flex !important;
+  }
+
+  .link-block-9 .point {
+    color: #fff !important;
+  }
+}
