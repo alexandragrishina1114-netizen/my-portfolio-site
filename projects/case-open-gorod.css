@@ -585,4 +585,237 @@
   }
 }
 
-/* Следующие блоки (проблема, анализ, гипотезы...) добавляем ниже, по одному. */
+/* 9. Блок "Интерфейс" */
+.og-interface {
+  position: relative;
+  width: var(--og-width);
+  margin: 1rem auto 0;
+  padding: 4rem 4rem 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #020701;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+}
+
+.og-interface::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: min(86rem, 74%);
+  aspect-ratio: 2070 / 2062;
+  background: url("gradient.png") right bottom / contain no-repeat;
+  pointer-events: none;
+}
+
+.og-interface__line {
+  position: absolute;
+  top: 4.5rem;
+  right: -12rem;
+  z-index: 0;
+  display: block;
+  width: min(75rem, 82vw);
+  max-width: none;
+  height: auto;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.og-interface__intro,
+.og-interface__desktop,
+.og-interface__mobile-copy,
+.og-interface__mobile-screens,
+.og-interface__mockup {
+  position: relative;
+  z-index: 1;
+}
+
+.og-interface__intro {
+  max-width: 30rem;
+  margin-bottom: 3rem;
+}
+
+.og-interface__eyebrow {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.og-interface__title {
+  margin: 0 0 1rem;
+  font-family: Unbounded, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.og-interface__text {
+  margin: 0;
+  max-width: 28rem;
+  font-size: 1.25rem;
+  line-height: 1.42;
+}
+
+.og-interface__desktop {
+  width: min(78rem, 100%);
+  margin: 0 auto 4rem;
+}
+
+.og-interface__desktop-image,
+.og-interface__mobile-image,
+.og-interface__mockup-image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.og-interface__mobile-copy {
+  max-width: 33rem;
+  margin: 0 0 2.5rem;
+}
+
+.og-interface__mobile-screens {
+  width: min(70rem, 100%);
+  margin: 0 auto 4rem;
+}
+
+.og-interface__mockup {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.38fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.og-interface__mockup--wide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.og-interface__mockup--wide .og-interface__mockup-image {
+  width: calc(100% + 8rem);
+  align-self: center;
+  margin-left: -4rem;
+  margin-right: -4rem;
+  transform: none;
+}
+
+.og-interface__mockup--vertical {
+  grid-template-columns: minmax(14rem, 0.36fr) minmax(0, 0.72fr);
+  align-items: start;
+  padding-bottom: 0;
+}
+
+.og-interface__caption {
+  margin: 0;
+  max-width: 17rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.28;
+}
+
+.og-interface__mockup--vertical .og-interface__mockup-image {
+  justify-self: end;
+}
+
+@media screen and (min-width: 1280px) {
+  .og-interface {
+    padding: 4.75rem 5rem 0;
+  }
+
+  .og-interface__desktop {
+    width: min(82rem, 100%);
+  }
+
+  .og-interface__mockup--wide .og-interface__mockup-image {
+    width: calc(100% + 10rem);
+    margin-left: -5rem;
+    margin-right: -5rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .og-interface {
+    padding: 3rem 2rem 0;
+  }
+
+  .og-interface__line {
+    top: 6rem;
+    right: -18rem;
+    width: 60rem;
+  }
+
+  .og-interface__mockup,
+  .og-interface__mockup--vertical {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .og-interface__mockup--vertical .og-interface__mockup-image {
+    justify-self: center;
+  }
+
+  .og-interface__mockup--wide .og-interface__mockup-image {
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .og-interface {
+    padding: 2rem 1.25rem 0;
+  }
+
+  .og-interface__line {
+    top: 8rem;
+    right: -18rem;
+    width: 42rem;
+    opacity: 0.28;
+  }
+
+  .og-interface__intro,
+  .og-interface__mobile-copy {
+    margin-bottom: 2rem;
+  }
+
+  .og-interface__eyebrow {
+    font-size: 0.85rem;
+  }
+
+  .og-interface__title {
+    font-size: 1.2rem;
+  }
+
+  .og-interface__text {
+    font-size: 1rem;
+  }
+
+  .og-interface__desktop,
+  .og-interface__mobile-screens {
+    margin-bottom: 3rem;
+  }
+
+  .og-interface__caption {
+    max-width: 20rem;
+    font-size: 0.85rem;
+  }
+
+  .og-interface__mockup--wide {
+    gap: 1.25rem;
+  }
+
+  .og-interface__mockup--wide .og-interface__mockup-image {
+    width: calc(100% + 2.5rem);
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+  }
+}
