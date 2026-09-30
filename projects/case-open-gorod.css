@@ -1,0 +1,330 @@
+/* Стили только для нового кейса. Все классы начинаются с og- (open gorod),
+   чтобы не конфликтовать с огромным CSS от Webflow. */
+
+/* 1. Переменные: цвета и ширина в одном месте. Поменяли тут - поменялось везде. */
+:root {
+  --og-accent: #5b55c6;   /* фиолетовый как на главной */
+  --og-text: #373737;
+  --og-card: #ffffff;
+  --og-width: min(90rem, calc(100% - 6.25rem)); /* такая же ширина, как у карточки "Обо мне" */
+}
+
+/* 2. Обложка: белая карточка, слева текст, справа картинка */
+.og-hero {
+  width: var(--og-width);
+  margin: 1rem auto 0;
+  padding: 4rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1.9fr; /* левая колонка в 1.9 раза уже правой */
+  gap: 3rem;
+  background: var(--og-card);
+  border-radius: 1.25rem;
+  color: var(--og-text);
+  font-family: Montserrat, sans-serif;
+}
+
+/* левая колонка: верхняя строка прижата вверх, заголовок вниз */
+.og-hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  min-width: 0;
+}
+
+.og-hero__top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--og-accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.og-hero__title {
+  margin: 0 0 1rem;
+  font-family: Unbounded, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.og-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--og-accent);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Рамка под картинку: сама держит пропорции 4:3 и скругление */
+.og-hero__media {
+  position: relative;
+  align-self: start;
+  min-width: 0;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* Картинка лежит внутри рамки и заполняет её целиком */
+.og-hero__img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  animation: og-reveal 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* Единственная анимация на странице: картинка "раскрывается" сверху вниз */
+@keyframes og-reveal {
+  from { clip-path: inset(0 0 100% 0 round 1rem); }
+  to   { clip-path: inset(0 0 0 0 round 1rem); }
+}
+
+/* Если у человека в системе выключена анимация - показываем сразу */
+@media (prefers-reduced-motion: reduce) {
+  .og-hero__img { animation: none; }
+}
+
+/* 3. Телефон: всё в один столбец */
+@media screen and (max-width: 767px) {
+  :root { --og-width: calc(100% - 1rem); }
+
+  .og-hero {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .og-hero__text { gap: 2rem; }
+}
+/* 4. Блок "проблема и цель": белая карточка, как остальные блоки кейса */
+.og-about {
+  width: var(--og-width);
+  margin: 1rem auto 0;
+  padding: 4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background: var(--og-card);
+  border-radius: 1.25rem;
+  color: var(--og-text);
+  font-family: Montserrat, sans-serif;
+}
+
+.og-about .case-about-card-1 {
+  display: grid;
+  grid-template-columns: 1fr 1.9fr;
+  gap: 3rem;
+}
+
+.og-about .case-about-text-1 {
+  width: auto;
+  min-width: 0;
+  gap: 3rem;
+  justify-content: flex-start;
+}
+
+.og-about .case-task-title,
+.og-about .case-eyebrow-2 {
+  color: #797979;
+}
+
+.og-about .case-about-text,
+.og-about .case-concept-text {
+  width: auto;
+  max-width: 26rem;
+  color: var(--og-text);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.og-about .case-about-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.og-about .img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.og-about .case-concept {
+  gap: 2rem;
+  padding: 2rem 0 0;
+  border-top: 0.1rem dashed #c9c9c9;
+}
+
+.og-about .case-concept-text {
+  max-width: 62rem;
+}
+
+.og-media { position: relative; }
+
+.og-image-link {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--og-card);
+  border-radius: 0.75rem;
+  color: var(--og-accent);
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.og-image-link strong { text-decoration: underline; text-underline-offset: 0.15em; }
+.og-image-link:focus-visible { outline: 2px solid var(--og-accent); outline-offset: 2px; }
+
+@media screen and (max-width: 767px) {
+  .og-about {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .og-about .case-about-card-1 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .og-about .case-about-text-1 {
+    gap: 1rem;
+  }
+
+  .og-about .case-about-text,
+  .og-about .case-concept-text {
+    max-width: none;
+    font-size: 0.875rem;
+    line-height: 1.35;
+  }
+
+  .og-about .case-concept {
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .og-image-link {
+    left: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* 5. Блок "Анализ": серый фон, скрин страницы и зелёные выноски */
+.og-analysis {
+  width: var(--og-width);
+  margin: 1rem auto 0;
+  padding: 4rem;
+  box-sizing: border-box;
+  background: #d8d8d8;
+  border-radius: 0.5rem;
+  color: var(--og-text);
+  font-family: Montserrat, sans-serif;
+}
+
+.og-analysis__header {
+  margin-bottom: 3rem;
+}
+
+.og-analysis__eyebrow {
+  margin-bottom: 1rem;
+  color: #797979;
+  font-family: Unbounded, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.og-analysis__title {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.og-analysis__stage {
+  position: relative;
+  width: min(46rem, 100%);
+  margin: 0 auto;
+}
+
+.og-analysis__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.og-note {
+  position: absolute;
+  width: 13rem;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  background: #29411a;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  font-size: 0.62rem;
+  font-weight: 500;
+  line-height: 1.25;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.22);
+}
+
+.og-note--left-top {
+  top: 10%;
+  left: -18%;
+}
+
+.og-note--right-top {
+  top: 7%;
+  right: -18%;
+}
+
+.og-note--left-middle {
+  top: 45%;
+  left: -17%;
+}
+
+.og-note--right-bottom {
+  right: -17%;
+  bottom: 24%;
+}
+
+@media screen and (max-width: 767px) {
+  .og-analysis {
+    padding: 1.5rem;
+  }
+
+  .og-analysis__header {
+    margin-bottom: 2rem;
+  }
+
+  .og-analysis__stage {
+    width: 100%;
+  }
+
+  .og-note {
+    position: static;
+    width: auto;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Следующие блоки (проблема, анализ, гипотезы...) добавляем ниже, по одному. */
