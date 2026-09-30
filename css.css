@@ -1483,3 +1483,111 @@
     font-size: 0.74rem !important;
   }
 }
+
+/* Shared mobile header and footer polish. */
+@media screen and (max-width: 767px) {
+  .section-3 {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+    margin: 0 auto 1rem !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+  }
+
+  .navbar,
+  .div-block-184 {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .text-block-52 {
+    font-size: 1.2rem !important;
+    line-height: 1.4rem !important;
+    white-space: nowrap !important;
+  }
+
+  .menu-button-4 {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .icon-3 {
+    font-size: 1.5rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .link-block-9 {
+    display: none !important;
+  }
+
+  .div-block-17.div-block-112.div-block-189 {
+    width: calc(100% - 1rem) !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 1rem auto 0 !important;
+    padding: 2rem !important;
+    gap: 2rem !important;
+    box-sizing: border-box !important;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+  }
+
+  .div-block-188 {
+    width: 100% !important;
+    gap: 1.5rem !important;
+  }
+
+  .div-block-187 {
+    width: 100% !important;
+    gap: 1rem !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .email,
+  .telegram {
+    width: 100% !important;
+  }
+
+  .text-block-13 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .text-block-73 {
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .text-block-73._1 {
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .dprofile {
+    width: 100% !important;
+    padding: 1rem !important;
+    border-radius: 0.75rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .text-block-74 {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .text-block-52 {
+    font-size: 1.2rem !important;
+    line-height: 1.4rem !important;
+  }
+}

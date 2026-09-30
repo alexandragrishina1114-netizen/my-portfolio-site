@@ -234,7 +234,7 @@
   padding: 4rem;
   box-sizing: border-box;
   background: #d8d8d8;
-  border-radius: 0.5rem;
+  border-radius: 1.25rem;
   color: var(--og-text);
   font-family: Montserrat, sans-serif;
 }
@@ -578,6 +578,21 @@
 
   .og-solution__grid {
     grid-template-columns: 1fr;
+  }
+
+  .og-solution-card {
+    min-height: 0;
+  }
+
+  .og-solution-card__media-frame {
+    block-size: auto;
+    background: #ffffff;
+  }
+
+  .og-solution-card__media {
+    position: static !important;
+    height: auto !important;
+    object-fit: contain !important;
   }
 
   .og-solution-card--wide {
