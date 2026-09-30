@@ -1490,12 +1490,12 @@ html {
 }
 
 .section-3 {
-  width: calc(100% - 2rem) !important;
+  width: min(90rem, calc(100% - 6.25rem)) !important;
   max-width: none !important;
   min-width: 0 !important;
   height: auto !important;
-  margin: 0 auto 1.25rem !important;
-  padding: 1rem !important;
+  margin: 0 auto 2rem !important;
+  padding: 2rem !important;
   box-sizing: border-box !important;
 }
 
@@ -1508,21 +1508,21 @@ html {
 }
 
 .div-block-184 {
-  min-height: 3.5rem !important;
+  min-height: 0 !important;
   padding: 0 !important;
-  gap: 0.75rem !important;
+  gap: 0 !important;
 }
 
 .brand {
   min-width: 0 !important;
-  flex: 1 1 auto !important;
+  flex: 0 1 auto !important;
 }
 
 .text-block-52 {
   width: auto !important;
   max-width: 100% !important;
-  font-size: clamp(0.75rem, 2.6vw, 1rem) !important;
-  line-height: 1.1 !important;
+  font-size: 1.2rem !important;
+  line-height: 1.4rem !important;
   white-space: nowrap !important;
 }
 
@@ -1581,13 +1581,13 @@ html {
 
 @media screen and (max-width: 767px) {
   .section-3 {
-    width: calc(100% - 1rem) !important;
-    margin-bottom: 1rem !important;
-    padding: 0.75rem !important;
+    width: auto !important;
+    margin: 0 1rem 1rem !important;
+    padding: 1rem !important;
   }
 
   .div-block-184 {
-    min-height: 3.25rem !important;
+    min-height: 0 !important;
   }
 
   .projects-grid {
@@ -1604,16 +1604,18 @@ html {
 
 @media screen and (max-width: 390px) {
   .section-3 {
-    width: calc(100% - 0.75rem) !important;
-    padding: 0.625rem !important;
+    width: auto !important;
+    margin: 0 0.75rem 1rem !important;
+    padding: 0.75rem !important;
   }
 
   .div-block-184 {
-    min-height: 3rem !important;
+    min-height: 0 !important;
   }
 
   .text-block-52 {
-    font-size: 0.7rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.1rem !important;
   }
 }
 

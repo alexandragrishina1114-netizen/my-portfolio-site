@@ -46,11 +46,11 @@
         <a href="../index.html" class="brand w-nav-brand" aria-label="home"><div class="text-block-52">[aleksandra grishina]</div></a>
         <div class="menu-button-4 w-nav-button" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
           <div class="icon-3 w-icon-nav-menu"></div>
-          <nav role="navigation" class="nav-menu w-nav-menu"><a href="../index.html#about" class="nav-link-4 w-nav-link">о себе</a><a href="../index.html#cases" class="nav-link-5 w-nav-link">проекты</a><a href="../index.html#contacts" class="nav-link-6 w-nav-link">контакты</a></nav>
+          <nav role="navigation" class="nav-menu w-nav-menu"><a href="../index.html#about" class="nav-link-4 w-nav-link">о себе</a><a href="../index.html#cases" class="nav-link-5 w-nav-link">кейсы</a><a href="../index.html#contacts" class="nav-link-6 w-nav-link">контакты</a></nav>
         </div>
         <div class="link-block-9">
           <a href="../index.html#about" class="link-block-12 w-inline-block"><div class="point">о&nbsp;себе</div></a>
-          <a href="../index.html#cases" class="link-block-10 w-inline-block"><div class="point">проекты</div></a>
+          <a href="../index.html#cases" class="link-block-10 w-inline-block"><div class="point">кейсы</div></a>
           <a href="../index.html#contacts" class="contacts w-inline-block"><div class="point">контакты</div></a>
         </div>
       </div>
@@ -89,7 +89,7 @@
     <div class="case-about-card-1">
       <div class="case-about-text-1">
         <div class="case-task-title">[проблема]</div>
-        <div class="case-about-text">После работы над сторителлинг-сайтом об&nbsp;особняке Безобразовой выяснилось, что пользователю сложно перейти от&nbsp;знакомства с&nbsp;историей здания к&nbsp;покупке билета на&nbsp;экскурсию: на&nbsp;странице непонятно, где начинается сценарий оформления</div>
+        <div class="case-about-text">После работы над сторителлинг-сайтом об&nbsp;особняке Безобразовой выяснилось, что&nbsp;пользователю сложно перейти от&nbsp;знакомства с&nbsp;историей здания к&nbsp;покупке билета на&nbsp;экскурсию: на&nbsp;странице непонятно, где&nbsp;начинается сценарий оформления</div>
       </div>
       <div class="case-about-image og-media">
         <img src="6981ee3269501ad1ff1dff7c_ocobnak_4.png" loading="lazy" alt="Сторителлинг-сайт об особняке Безобразовой на ноутбуке" class="img">
@@ -105,22 +105,89 @@
     <!-- ===== БЛОК 3: АНАЛИЗ ===== -->
   <section class="og-analysis">
     <div class="og-analysis__header">
-      <div class="og-analysis__eyebrow">[сценарии и паттерны]</div>
+      <div class="og-analysis__eyebrow">[анализ и гипотезы]</div>
       <h2 class="og-analysis__title">Анализ</h2>
     </div>
 
     <div class="og-analysis__stage">
       <img
         class="og-analysis__image"
-        src="6a5691f5bd1d217dfec3d6fc_analytics-1.png"
+        src="original-open-gorod.png"
         loading="lazy"
         alt="Анализ страницы экскурсии на сайте Открытый город"
       >
 
-      <div class="og-note og-note--left-top">Главная не&nbsp;помогает понять, где начинается сценарий покупки</div>
-      <div class="og-note og-note--right-top">В&nbsp;карточке нет&nbsp;короткого описания ценности экскурсии</div>
-      <div class="og-note og-note--left-middle">Блоки информации спрятаны ниже первого экрана</div>
-      <div class="og-note og-note--right-bottom">Путь к&nbsp;покупке выглядит как второстепенное действие</div>
+      <div class="og-analysis__notes">
+        <div class="og-note og-note--left-top">Галерея не помогает выбрать экскурсию. Фотографии показывают здание и интерьеры, но рядом нет подписей или пояснений</div>
+        <div class="og-note og-note--right-top">В верхней части страницы много навигационных элементов из-за которых внимание пользователя рассеивается</div>
+        <div class="og-note og-note--left-middle">Важная информация спрятана в длинном тексте</div>
+        <div class="og-note og-note--right-bottom">После описания нет следующего действия</div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ===== БЛОК 4: ГИПОТЕЗЫ ===== -->
+  <section class="og-hypotheses">
+    <h2 class="og-hypotheses__title">Гипотезы</h2>
+
+    <div class="og-hypotheses__grid">
+      <div class="og-hypothesis">
+        1. Если собрать ключевые данные об&nbsp;экскурсии на&nbsp;первом экране, пользователь быстрее перейдет к&nbsp;следующему шагу: выбор даты и&nbsp;запись
+      </div>
+
+      <div class="og-hypothesis">
+        2. Если структурировать длинный текст в&nbsp;раскрывающиеся блоки, страница станет легче для чтения
+      </div>
+
+      <div class="og-hypothesis">
+        3. Если оформить блок с&nbsp;ближайшими событиями, пользователь сможет ознакомиться с&nbsp;другими мероприятиями и&nbsp;совершить покупку
+      </div>
+    </div>
+  </section>
+
+    <!-- ===== БЛОК 5: ПУТЬ ПОЛЬЗОВАТЕЛЯ ===== -->
+  <section class="og-user-flow">
+    <h2 class="og-user-flow__title">Путь пользователя<br>по странице</h2>
+
+    <div class="og-user-flow__scheme">
+      <img
+        class="og-user-flow__image"
+        src="user-flow.png"
+        loading="lazy"
+        alt="Схема пути пользователя по странице экскурсии"
+      >
+    </div>
+  </section>
+
+    <!-- ===== БЛОК 6: РЕШЕНИЕ ===== -->
+  <section class="og-solution">
+    <div class="og-solution__intro">
+      <h2 class="og-solution__title">Решение</h2>
+      <p class="og-solution__text">Я перестроила страницу экскурсии вокруг сценария покупки, сохранив узнаваемый стиль сервиса «Открытый город»</p>
+    </div>
+
+    <div class="og-solution__grid">
+      <article class="og-solution-card">
+        <h3 class="og-solution-card__title">Вынесла ключевую информацию на&nbsp;первый экран:</h3>
+        <p class="og-solution-card__text">название экскурсии, фотографию особняка, длительность, адрес, рейтинг и&nbsp;стоимость</p>
+        <div class="og-solution-card__media-frame">
+          <img class="og-solution-card__media" src="open-gorod-block.png" loading="lazy" alt="Первый экран страницы экскурсии">
+        </div>
+      </article>
+
+      <article class="og-solution-card">
+        <h3 class="og-solution-card__title">Переработала логотип в&nbsp;облегченную версию</h3>
+        <p class="og-solution-card__text">С помощью этой версии логотипа есть возможность использовать знак отдельно, например в&nbsp;иконке приложения</p>
+        <div class="og-solution-card__media-frame">
+          <img class="og-solution-card__media" src="open-gorod-mockup.png" loading="lazy" alt="Мокап приложения Открытый город">
+        </div>
+      </article>
+
+      <article class="og-solution-card og-solution-card--wide">
+        <h3 class="og-solution-card__title">Сделала сценарий покупки последовательным</h3>
+        <p class="og-solution-card__text">Пользователь проходит понятный путь: знакомится с&nbsp;экскурсией, выбирает дату и&nbsp;время, указывает количество человек, вводит контактные данные и&nbsp;получает подтверждение записи</p>
+        <video class="og-solution-card__video" src="open-gorod-presentstion.mov" autoplay loop muted playsinline preload="metadata"></video>
+      </article>
     </div>
   </section>
   

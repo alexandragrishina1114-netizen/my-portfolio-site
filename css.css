@@ -77,6 +77,45 @@
   transform: translate(0, -.01em) !important;
 }
 
+.about-me .div-block-130 {
+  align-items: flex-start !important;
+}
+
+.about-me .rezume.cta-link.cta-external {
+  min-width: 12.5rem !important;
+  min-height: 2.85rem !important;
+  padding: 0.72rem 1.65rem !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: transparent !important;
+  border: 0.1rem solid #5b55c6 !important;
+  border-radius: 999px !important;
+  color: #5b55c6 !important;
+  box-shadow: none !important;
+  font-family: Unbounded, sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease !important;
+}
+
+.about-me .rezume.cta-link.cta-external::after {
+  display: none !important;
+  content: "" !important;
+}
+
+.about-me .rezume.cta-link.cta-external:hover,
+.about-me .rezume.cta-link.cta-external:focus-visible {
+  background: #5b55c6 !important;
+  border-color: #5b55c6 !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+  transform: translateY(-0.08rem) !important;
+}
+
 @media screen and (max-width: 991px) {
   .about-me .text-block-30 {
     width: 15rem !important;
@@ -96,6 +135,11 @@
 @media screen and (max-width: 767px) {
   .about-me {
     padding: 3rem 1.5rem 4rem !important;
+  }
+
+  .about-me .rezume.cta-link.cta-external {
+    width: 100% !important;
+    min-width: 0 !important;
   }
 }
 /* cyrillic */
@@ -1413,7 +1457,7 @@
 
 @media screen and (max-width: 767px) {
 .home-projects-section {
-    width: calc(100% - 1rem) !important;
+    width: calc(100% - 2.5rem) !important;
     margin: 1rem auto 2rem !important;
   }
 

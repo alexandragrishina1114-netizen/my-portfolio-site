@@ -37,14 +37,14 @@
   display: flex;
   justify-content: space-between;
   color: var(--og-accent);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
 .og-hero__title {
   margin: 0 0 1rem;
   font-family: Unbounded, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 500;
   line-height: 1.25;
 }
@@ -57,7 +57,7 @@
   padding: 0;
   list-style: none;
   color: var(--og-accent);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -145,8 +145,8 @@
   width: auto;
   max-width: 26rem;
   color: var(--og-text);
-  font-size: 1rem;
-  line-height: 1.35;
+  font-size: 1.2rem;
+  line-height: 1.38;
 }
 
 .og-about .case-about-image {
@@ -185,7 +185,7 @@
   border-radius: 0.75rem;
   color: var(--og-accent);
   font-family: Montserrat, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.25;
   text-decoration: none;
@@ -212,7 +212,7 @@
   .og-about .case-about-text,
   .og-about .case-concept-text {
     max-width: none;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.35;
   }
 
@@ -240,14 +240,14 @@
 }
 
 .og-analysis__header {
-  margin-bottom: 3rem;
+  margin-bottom: 2cap;
 }
 
 .og-analysis__eyebrow {
   margin-bottom: 1rem;
   color: #797979;
   font-family: Unbounded, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 300;
   line-height: 1;
 }
@@ -255,55 +255,60 @@
 .og-analysis__title {
   margin: 0;
   font-family: Montserrat, sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.3;
 }
 
 .og-analysis__stage {
   position: relative;
-  width: min(46rem, 100%);
+  width: min(64rem, 100%);
   margin: 0 auto;
 }
 
 .og-analysis__image {
   display: block;
-  width: 100%;
+  width: min(46rem, 74%);
   height: auto;
+  margin: 0 auto;
+}
+
+.og-analysis__notes {
+  display: contents;
 }
 
 .og-note {
   position: absolute;
-  width: 13rem;
+  width: 14rem;
   padding: 0.75rem 1rem;
   box-sizing: border-box;
-  background: #29411a;
-  border-radius: 0.25rem;
+  background: #2A380D;
+  border-radius: 0.35rem;
   color: #ffffff;
-  font-size: 0.62rem;
+  font-size: 0.82rem;
   font-weight: 500;
   line-height: 1.25;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.22);
+  box-shadow: 0 0.5rem 1rem rgba(21, 21, 21, 0.22);
 }
 
 .og-note--left-top {
-  top: 10%;
-  left: -18%;
+  top: 7rem;
+  left: 7rem;
 }
 
 .og-note--right-top {
-  top: 7%;
-  right: -18%;
+  top: 1rem;
+  right: 7rem;
 }
 
 .og-note--left-middle {
-  top: 45%;
-  left: -17%;
+  top: 20rem;
+  left: 7.5rem;
 }
 
 .og-note--right-bottom {
-  right: -17%;
-  bottom: 24%;
+  right: 7.5rem;
+  bottom: 42rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -316,14 +321,267 @@
   }
 
   .og-analysis__stage {
+    display: flex;
+    gap: 0.75rem;
+    align-items: start;
     width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .og-analysis__image {
+    flex: 0 0 auto;
+    order: 2;
+    width: 24rem;
+    max-width: none;
+    margin: 0;
+  }
+
+  .og-analysis__notes {
+    display: flex;
+    flex: 0 0 12rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    order: 1;
   }
 
   .og-note {
     position: static;
-    width: auto;
-    margin-top: 0.75rem;
+    width: 100%;
+    margin: 0;
     font-size: 0.75rem;
+  }
+}
+
+/* 6. Блок "Гипотезы" */
+.og-hypotheses {
+  width: var(--og-width);
+  margin: 1rem auto 0;
+  padding: 5rem 5rem 4.5rem;
+  box-sizing: border-box;
+  background: var(--og-card);
+  border-radius: 0.75rem;
+  color: var(--og-text);
+  font-family: Montserrat, sans-serif;
+}
+
+.og-hypotheses__title {
+  margin: 0 0 4rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.og-hypotheses__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.og-hypothesis {
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.og-hypothesis:first-child {
+  padding-left: 0.5rem;
+}
+
+.og-hypothesis + .og-hypothesis {
+  border-left: 0.08rem solid #797979;
+}
+
+@media screen and (max-width: 767px) {
+  .og-hypotheses {
+    padding: 2rem 1.5rem;
+  }
+
+  .og-hypotheses__title {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .og-hypotheses__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .og-hypothesis {
+    min-height: 0;
+    padding: 0 0 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  .og-hypothesis + .og-hypothesis {
+    border-left: 0;
+    border-top: 0.08rem solid #c9c9c9;
+    padding-top: 1.5rem;
+  }
+}
+
+/* 7. Блок "Путь пользователя" */
+.og-user-flow {
+  width: var(--og-width);
+  margin: 1rem auto 0;
+  padding: 4.5rem 5rem;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(111, 151, 35, 0.75), transparent 34%),
+    linear-gradient(135deg, #2a380d 0%, #101706 42%, #000000 100%);
+  border-radius: 0.75rem;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  overflow: hidden;
+}
+
+.og-user-flow__title {
+  margin: 0 0 3rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.og-user-flow__scheme {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.og-user-flow__image {
+  display: block;
+  width: 100%;
+  min-width: 74rem;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .og-user-flow {
+    padding: 2rem 1.5rem;
+  }
+
+  .og-user-flow__title {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  .og-user-flow__image {
+    min-width: 48rem;
+  }
+}
+
+/* 8. Блок "Решение" */
+.og-solution {
+  width: var(--og-width);
+  margin: 1rem auto 0;
+  padding: 4rem;
+  box-sizing: border-box;
+  background: var(--og-card);
+  border-radius: 0.75rem;
+  color: var(--og-text);
+  font-family: Montserrat, sans-serif;
+}
+
+.og-solution__intro {
+  max-width: 24rem;
+  margin-bottom: 2rem;
+}
+
+.og-solution__title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.og-solution__text {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.38;
+}
+
+.og-solution__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.og-solution-card {
+  min-height: 32rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-items: stretch;
+  background: #2b352b;
+  border-radius: 0.5rem;
+  color: #ffffff;
+}
+
+.og-solution-card--wide {
+  grid-column: 1 / -1;
+}
+
+.og-solution-card__title {
+  max-width: 22rem;
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.og-solution-card__text {
+  max-width: 29rem;
+  margin: 0 0 2rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.og-solution-card__media-frame {
+  inline-size: 100%;
+  block-size: 24rem;
+  align-self: end;
+  justify-self: stretch;
+  overflow: hidden;
+  border-radius: 0.35rem;
+}
+
+.og-solution-card__media,
+.og-solution-card__video {
+  display: block;
+  width: 100%;
+  border-radius: 0.35rem;
+}
+
+.og-solution-card__media {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.og-solution-card__video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .og-solution {
+    padding: 1.5rem;
+  }
+
+  .og-solution__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .og-solution-card--wide {
+    grid-column: auto;
   }
 }
 
