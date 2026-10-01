@@ -837,7 +837,7 @@
 
 .og-result {
   width: var(--og-width);
-  margin: 1.25rem auto 0;
+  margin: 1.25rem auto;
   padding: 6.5rem 6rem;
   box-sizing: border-box;
   background: #314b14;
@@ -862,7 +862,7 @@
 
 .og-result__text p {
   margin: 0;
-  font-size: 1.65rem;
+  font-size: 1.25rem;
   line-height: 1.42;
 }
 
@@ -872,7 +872,7 @@
   }
 
   .og-result__text p {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
 }
 
