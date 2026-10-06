@@ -895,3 +895,63 @@
     font-size: 1rem;
   }
 }
+
+/* Final mobile scale pass: match all UX case blocks with the larger mobile cards. */
+@media screen and (max-width: 767px) {
+  :root {
+    --og-width: calc(100% - 1rem);
+  }
+
+  .og-hero,
+  .og-about,
+  .og-analysis,
+  .og-hypotheses,
+  .og-user-flow,
+  .og-solution,
+  .og-interface,
+  .og-result {
+    width: var(--og-width) !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 1rem !important;
+  }
+
+  .og-hero,
+  .og-about,
+  .og-analysis,
+  .og-hypotheses,
+  .og-user-flow,
+  .og-solution,
+  .og-result {
+    padding: 2rem !important;
+  }
+
+  .og-interface {
+    padding: 2rem 1rem 0 !important;
+  }
+
+  .og-about .case-about-text,
+  .og-about .case-concept-text,
+  .og-analysis__eyebrow,
+  .og-note,
+  .og-hypothesis,
+  .og-user-flow__title,
+  .og-solution__text,
+  .og-solution-card__text,
+  .og-interface__eyebrow,
+  .og-interface__text,
+  .og-interface__caption,
+  .og-result__text p {
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .og-solution__title,
+  .og-solution-card__title,
+  .og-interface__title,
+  .og-result__title {
+    font-size: 1.35rem !important;
+    line-height: 1.22 !important;
+  }
+}
