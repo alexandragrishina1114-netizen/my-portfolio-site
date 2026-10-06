@@ -198,16 +198,16 @@ a {
   grid-area: portrait;
   align-self: start;
   width: 100%;
-  aspect-ratio: 1 / 1.04;
+  aspect-ratio: 1 / 1;
   border-radius: 1rem;
   overflow: hidden;
-  background: transparent;
+  background: #c4c2c2;
 }
 
 .hero-portrait img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -413,7 +413,7 @@ a {
 
   .hero-portrait {
     margin-top: 2rem;
-    aspect-ratio: 1 / 1.18;
+    aspect-ratio: 1 / 1;
   }
 
   .hero-actions {
