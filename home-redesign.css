@@ -197,6 +197,7 @@ a {
 .hero-portrait {
   grid-area: portrait;
   align-self: start;
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 1rem;
@@ -209,6 +210,27 @@ a {
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.portrait-gaze {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}
+
+.portrait-gaze[hidden] {
+  display: none;
+}
+
+@media (max-width: 479px), (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .portrait-gaze {
+    display: none;
+  }
 }
 
 .hero-statement {
