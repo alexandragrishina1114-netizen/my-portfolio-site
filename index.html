@@ -1,215 +1,113 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Александра Гришина — UX/UI Designer</title>
-    <meta
-      name="description"
-      content="UX/UI дизайнер с сильным визуальным бэкграундом: пользовательские сценарии, прототипы, интерфейсы и дизайн-системы."
-    >
-    <link rel="icon" href="6a6e5d98c50ccf20801c5069.png" type="image/png" sizes="32x32">
-    <link rel="apple-touch-icon" href="6a6e5d98dfaeb6bba2785b0c.png" sizes="180x180">
-    <link rel="stylesheet" href="home-redesign.css">
-    <link rel="stylesheet" href="shared-footer.css">
-    <script>document.documentElement.classList.add("js");</script>
-  </head>
-  <body>
-    <div class="home-shell">
-      <header class="site-header site-header--home">
-        <a class="site-brand" href="index.html">[aleksandra grishina]</a>
-        <nav class="site-nav" aria-label="Основная навигация">
-          <a href="#about">о себе</a>
-          <a href="#cases">кейсы</a>
-          <a href="#contacts">контакты</a>
-        </nav>
-        <details class="site-menu">
-          <summary aria-label="Открыть меню">☰</summary>
-          <nav aria-label="Мобильная навигация">
-            <a href="#about">о себе</a>
-            <a href="#cases">кейсы</a>
-            <a href="#contacts">контакты</a>
-          </nav>
-        </details>
-      </header>
-
-      <main class="home-main">
-        <section class="hero" aria-labelledby="hero-name">
-          <div class="hero-grid">
-            <div class="hero-identity">
-              <h1 class="hero-name" id="hero-name">Александра Гришина</h1>
-              <p class="hero-role">UX/UI designer</p>
-            </div>
-
-            <div class="hero-portrait">
-              <img
-                src="am_baby.png"
-                alt="Портрет Александры Гришиной"
-                width="798"
-                height="791"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              >
-              <canvas class="portrait-gaze" width="798" height="791" aria-hidden="true" hidden></canvas>
-            </div>
-
-            <div class="hero-actions">
-              <a class="hero-button hero-button--primary" href="#cases">смотреть кейсы</a>
-              <a class="hero-button" href="aleksandra-grishina-ux-ui-resume.pdf" download>скачать резюме</a>
-            </div>
-
-            <div class="hero-experience">
-              <span>В дизайне с 2021 года</span>
-              <span aria-hidden="true">&middot;</span>
-              <span>B2C</span>
-              <span aria-hidden="true">&middot;</span>
-              <span>B2B</span>
-            </div>
-          </div>
-
-          <p class="hero-statement">
-            Превращаю сложные задачи в понятные цифровые продукты: разбираю пользовательские сценарии,
-            продумываю структуру, собираю прототипы и довожу интерфейс до цельного визуального языка
-          </p>
-        </section>
-
-        <section class="cases-section" id="cases" aria-labelledby="cases-title">
-          <h2 class="section-title" id="cases-title">Кейсы</h2>
-
-          <div class="cases-grid">
-            <a class="case-card" href="projects/open-gorod-new.html">
-              <img src="cover-case.png" alt="Редизайн страницы покупки экскурсии" loading="lazy">
-              <span class="case-meta">
-                <span class="case-title">Редизайн сценария покупки экскурсии</span>
-                <span class="case-tags"><span class="case-tag">ux/ui</span></span>
-              </span>
-            </a>
-
-            <a class="case-card" href="projects/osobnyak-bezobrazovoy.html">
-              <img
-                src="projects/6981ee3269501ad1ff1dff7c_ocobnak_4.png"
-                alt="Сторителлинг-сайт об Особняке Безобразовой"
-                loading="lazy"
-              >
-              <span class="case-meta">
-                <span class="case-title">Сторителлинг-сайт Особняк Безобразовой</span>
-                <span class="case-tags">
-                  <span class="case-tag">web design</span>
-                  <span class="case-tag">storytelling</span>
-                </span>
-              </span>
-            </a>
-
-            <a class="case-card" href="projects/branding.html">
-              <img
-                src="projects/698399a59a924353952c5382_info-day2.png"
-                alt="Брендинг конференции Инфодень NAUKA"
-                loading="lazy"
-              >
-              <span class="case-meta">
-                <span class="case-title">Брендинг конференции «Инфодень NAUKA»</span>
-                <span class="case-tags"><span class="case-tag">branding</span></span>
-              </span>
-            </a>
-
-            <a class="case-card" href="projects/fanzine.html">
-              <img
-                src="projects/69807a6a30c072255a00755f_разворот.png"
-                alt="Разворот фанзина Переток"
-                loading="lazy"
-              >
-              <span class="case-meta">
-                <span class="case-title">Фанзин «Переток»</span>
-                <span class="case-tags"><span class="case-tag">print design</span></span>
-              </span>
-            </a>
-
-            <a class="case-card" href="projects/brendbook.html">
-              <img
-                src="projects/699b89b1c61ed2806b115dde_brandbook%2001.56.19.png"
-                alt="Ребрендинг брендбука компании NAUKA"
-                loading="lazy"
-              >
-              <span class="case-meta">
-                <span class="case-title">Ребрендинг брендбука компании «NAUKA»</span>
-                <span class="case-tags">
-                  <span class="case-tag">brandbook</span>
-                  <span class="case-tag">identity</span>
-                </span>
-              </span>
-            </a>
-          </div>
-        </section>
-      </main>
-
-      <section class="profile-panel" id="about" aria-labelledby="about-title">
-        <div class="profile-section">
-          <h2 class="profile-title" id="about-title">Обо мне</h2>
-          <p class="profile-copy">
-            Превращаю сложные задачи в понятные цифровые продукты: разбираю пользовательские сценарии,
-            продумываю структуру, собираю прототипы и довожу интерфейс до цельного визуального языка.
-          </p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#161518" />
+  <meta name="description" content="Экспериментальная прогулка по портфолио Александры Гришиной" />
+  <link rel="icon" href="6a6e5d98c50ccf20801c5069.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="6a6e5d98dfaeb6bba2785b0c.png" sizes="180x180" />
+  <title>Александра Гришина — Gallery Walk</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+    :root{font-family:Manrope,Arial,sans-serif;color:#f6f3ef;background:#171518;--violet:#b3a4ff;--progress:0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}button,a{font:inherit}button{cursor:pointer}a{color:inherit}
+    .scroll-area{height:720vh}.viewport{position:sticky;top:0;height:100svh;overflow:hidden;background:#171518;isolation:isolate}
+    .viewport:before{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:radial-gradient(ellipse at 50% 47%,transparent 26%,#100f13bb 100%)}
+    .viewport:after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E")}
+    .space{position:absolute;inset:0;perspective:900px;perspective-origin:50% 50%;overflow:hidden}
+    .world{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+    .plane{position:absolute;transform-style:preserve-3d;backface-visibility:visible}
+    .floor,.ceiling{width:1000px;height:7800px;left:-500px;top:-3900px;background:repeating-linear-gradient(90deg,transparent 0 197px,#9e90a31b 198px 200px),repeating-linear-gradient(0deg,transparent 0 348px,#9e90a31e 349px 351px),#272329}
+    .floor{transform:translateY(295px) rotateX(90deg)}.ceiling{transform:translateY(-300px) rotateX(90deg);background:linear-gradient(90deg,#28242b,#403942 50%,#28242b)}
+    .wall{height:600px;width:7800px;top:-300px;left:-3900px;background:repeating-linear-gradient(90deg,#343036 0 695px,#514750 698px 701px),#343036;box-shadow:inset 0 0 90px #141116}
+    .wall.left{transform:translateX(-500px) rotateY(90deg)}.wall.right{transform:translateX(500px) rotateY(90deg)}
+    .end-wall{width:1000px;height:600px;left:-500px;top:-300px;transform:translateZ(-3250px);background:linear-gradient(135deg,#3e3941,#201d24)}
+    .light{width:170px;height:9px;left:-85px;top:-298px;background:#fff9e0;box-shadow:0 0 50px 17px #f5eaca88,0 0 180px 100px #faeac820;transform:translateZ(var(--z));border-radius:20px}
+    .arch{width:1000px;height:600px;top:-300px;left:-500px;border:34px solid #4b424a;border-bottom:0;border-radius:460px 460px 0 0;box-shadow:0 12px 55px #100e1399,inset 0 0 60px #100e1366;transform:translateZ(var(--z));pointer-events:none}
+    .art{position:absolute;left:0;top:0;width:460px;height:355px;padding:13px;background:#d4c9bd;box-shadow:0 14px 45px #0f0c0dd9,0 0 0 2px #f4e8db88;transform-style:preserve-3d;transition:filter .3s,box-shadow .3s;text-decoration:none;display:block}
+    .art:hover{filter:brightness(1.18);box-shadow:0 0 60px #bba8ff77,0 20px 50px #0f0c0d}
+    .art img{width:100%;height:100%;object-fit:cover;display:block;background:#aaa}
+    .art[data-side="left"]{transform:translate3d(-490px,-158px,var(--z)) rotateY(74deg);transform-origin:50% 50%}
+    .art[data-side="right"]{transform:translate3d(30px,-158px,var(--z)) rotateY(-74deg)}
+    .plaque{position:absolute;top:calc(100% + 15px);left:0;width:100%;background:#242127ee;padding:11px 16px;border:1px solid #ffffff24;color:#fff;font-size:15px;font-weight:600;letter-spacing:-.02em;line-height:1.4;box-shadow:0 10px 35px #120f1399}
+    .plaque small{display:block;color:#bdb4bf;font-weight:500;font-size:10px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:3px}
+    .hud{position:absolute;inset:0;z-index:10;pointer-events:none;display:flex;flex-direction:column;justify-content:space-between;padding:31px clamp(20px,4.5vw,75px)}.hud>*{pointer-events:auto}
+    .top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.brand{font-weight:800;font-size:16px;letter-spacing:-.035em;text-decoration:none}.brand span{color:var(--violet)}
+    .top-right{display:flex;align-items:center;gap:12px}.micro{font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:#e8e2e6b0}.outline{color:#fff;background:#302a34bd;border:1px solid #ffffff59;border-radius:100px;padding:11px 18px;font-size:11px;font-weight:700;transition:background .2s}.outline:hover{background:#6353ac}
+    .bottom{display:flex;align-items:end;justify-content:space-between;gap:20px}.counter{font-size:11px;letter-spacing:.2em;color:#d7ccdd;text-transform:uppercase;display:flex;align-items:center;gap:13px}.line{width:130px;height:2px;background:#ffffff38;display:block;position:relative}.line i{position:absolute;left:0;top:0;height:100%;background:var(--violet);width:calc(var(--progress)*100%)}
+    .scene-caption{font-size:clamp(25px,4.2vw,61px);letter-spacing:-.065em;font-weight:700;max-width:600px;line-height:1.06;text-shadow:0 3px 30px #120f12;transition:opacity .3s;pointer-events:none}.scene-caption em{font-style:normal;color:#bdb1ff}
+    .helper{position:absolute;z-index:11;left:50%;bottom:38px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:#ffffffc5;font-size:10px;letter-spacing:.13em;text-transform:uppercase;pointer-events:none;transition:opacity .3s}.wheel{width:24px;height:38px;border:1px solid #ffffff9a;border-radius:20px;position:relative}.wheel:after{content:"";position:absolute;width:3px;height:8px;background:#fff;border-radius:5px;left:10px;top:8px;animation:wheel 1.4s infinite}@keyframes wheel{to{transform:translateY(13px);opacity:0}}
+    .intro{position:absolute;inset:0;z-index:7;display:grid;place-items:center;pointer-events:none;text-align:center;background:linear-gradient(180deg,#18151c56,transparent 40%,#1310168c);transition:opacity .5s}.intro-inner{transform:translateY(-4vh)}.eyebrow{letter-spacing:.28em;text-transform:uppercase;color:#d0c2e4;font-weight:700;font-size:11px}.intro h1{font-size:clamp(56px,10vw,156px);line-height:.92;letter-spacing:-.08em;margin:24px 0 18px;font-weight:700;text-shadow:0 15px 75px #110e15}.intro h1 span{display:block;color:#b6a5ff;font-style:italic;font-weight:500;font-family:Georgia,serif;letter-spacing:-.085em}.intro p{font-size:clamp(12px,1.4vw,16px);color:#eee7f0c9;max-width:340px;margin:auto;line-height:1.65}
+    .focus-dot{position:absolute;left:50%;top:50%;width:5px;height:5px;border:1px solid #fff8;border-radius:50%;transform:translate(-50%,-50%);z-index:8;pointer-events:none}
+    .navpanel{position:absolute;inset:0;z-index:30;background:#151318ef;backdrop-filter:blur(22px);display:flex;flex-direction:column;gap:25px;padding:clamp(24px,6vw,75px);overflow:auto;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}.navpanel.open{opacity:1;visibility:visible}.navhead{display:flex;justify-content:space-between;align-items:center;gap:20px}.navpanel h2{font-size:clamp(40px,6vw,90px);letter-spacing:-.07em;line-height:1;margin:15px 0}.navlist{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}.navitem{text-decoration:none;display:flex;flex-direction:column;gap:12px;min-width:0}.navitem img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;filter:saturate(.8);transition:transform .25s,filter .25s}.navitem:hover img{transform:translateY(-7px);filter:saturate(1.2)}.navitem strong{font-size:13px;line-height:1.4}.navitem small{color:#aaa1b0;font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+    .about-panel{position:absolute;inset:0;z-index:31;background:#17151bf5;backdrop-filter:blur(25px);overflow-y:auto;padding:clamp(24px,6vw,76px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}.about-panel.open{opacity:1;visibility:visible}.about-panel h2{font-size:clamp(48px,8vw,112px);letter-spacing:-.08em;line-height:1;margin:32px 0 20px}.about-lead{max-width:790px;font-size:clamp(17px,2.2vw,26px);line-height:1.55;color:#d5ced9}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);margin-top:55px}.about-grid h3{font-size:13px;color:#b8a8ff;text-transform:uppercase;letter-spacing:.2em;padding-bottom:15px;border-bottom:1px solid #ffffff35}.about-item{display:grid;grid-template-columns:1fr auto;gap:12px;padding:20px 0;border-bottom:1px solid #ffffff20}.about-item strong{font-size:17px;letter-spacing:-.025em}.about-item p{color:#bab0bf;font-size:13px;line-height:1.6;margin:7px 0 0}.about-item time{color:#b8a8ff;font-size:12px;white-space:nowrap}.about-actions{display:flex;gap:12px;flex-wrap:wrap;margin:36px 0}.about-actions a{text-decoration:none}
+    .mobile-message{display:none}.hint-click{position:absolute;z-index:9;right:4.5vw;top:50%;transform:translateY(-50%);font-size:10px;letter-spacing:.12em;color:#f5eaf3a8;writing-mode:vertical-rl;text-transform:uppercase;pointer-events:none}
+    @media(max-width:700px){.hud{padding:20px}.micro,.counter .line{display:none}.brand{font-size:13px}.top-right{gap:7px}.outline{padding:10px 13px}.bottom{padding-bottom:26px}.scene-caption{font-size:28px;max-width:75%}.counter{font-size:10px}.intro h1{font-size:clamp(49px,11vw,70px)}.intro p{padding:0 27px}.navlist{grid-template-columns:repeat(2,minmax(0,1fr))}.navpanel h2{font-size:44px}.about-grid{grid-template-columns:1fr;gap:20px}.about-item{grid-template-columns:1fr}.helper{bottom:75px}.mobile-message{display:block;position:absolute;bottom:13px;left:0;right:0;text-align:center;color:#aea5b1;font-size:9px;z-index:12}.hint-click{display:none}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<main class="scroll-area" id="walk">
+  <section class="viewport" aria-label="Интерактивная прогулка по галерее проектов">
+    <div class="space" aria-hidden="true"><div class="world" id="world">
+      <div class="plane floor"></div><div class="plane ceiling"></div><div class="plane wall left"></div><div class="plane wall right"></div><div class="plane end-wall"></div>
+      <div class="plane arch" style="--z:-780px"></div><div class="plane arch" style="--z:-1580px"></div><div class="plane arch" style="--z:-2380px"></div>
+      <div class="plane light" style="--z:-300px"></div><div class="plane light" style="--z:-1100px"></div><div class="plane light" style="--z:-1900px"></div><div class="plane light" style="--z:-2700px"></div>
+    </div></div>
+    <div class="intro" id="intro"><div class="intro-inner"><div class="eyebrow">[ UX/UI designer ]</div><h1>Aleksandra<span>Grishina.</span></h1><p>В дизайне с 2021 года<br>B2C · B2B</p></div></div>
+    <div class="focus-dot"></div>
+    <div class="hud"><div class="top"><a class="brand" href="#walk">[aleksandra <span>grishina</span>]</a><div class="top-right"><button class="outline" id="aboutButton">Обо мне</button><button class="outline" id="listButton">Все проекты ↗</button></div></div><div class="bottom"><div><div class="counter"><span id="counter">00 / 05</span><span class="line"><i></i></span></div><div class="scene-caption" id="caption"></div></div><button class="outline" id="nextButton">Дальше ↓</button></div></div>
+    <div class="helper" id="helper"><span class="wheel"></span>Листай вниз, чтобы идти</div>
+    <div class="mobile-message">Прототип • лучше всего смотреть на большом экране</div>
+    <div class="navpanel" id="navpanel" aria-hidden="true"><div class="navhead"><div class="eyebrow">[ Index / 05 selected works ]</div><button class="outline" id="closeButton">Закрыть ✕</button></div><h2>Коллекция<br>проектов.</h2><div class="navlist" id="navlist"></div></div>
+    <section class="about-panel" id="aboutPanel" aria-label="Обо мне" aria-hidden="true">
+      <div class="navhead"><span class="eyebrow">[ 01 / About the designer ]</span><button class="outline" id="closeAbout">Закрыть ✕</button></div>
+      <h2>Обо <span style="color:#b6a5ff">мне.</span></h2>
+      <p class="about-lead">Превращаю сложные задачи в понятные цифровые продукты: разбираю пользовательские сценарии, продумываю структуру, собираю прототипы и довожу интерфейс до цельного визуального языка.</p>
+      <div class="about-grid">
+        <div><h3>Опыт</h3>
+          <div class="about-item"><div><strong>ООО NAUKA</strong><p>Дизайнер</p></div><time>2024–2026</time></div>
+          <div class="about-item"><div><strong>СМ Клиника</strong><p>Дизайнер</p></div><time>2023–2024</time></div>
+          <div class="about-item"><div><strong>ООО Эталон Проект</strong><p>Дизайнер</p></div><time>2021–2023</time></div>
         </div>
-
-        <div class="profile-section profile-section--experience">
-          <h2 class="profile-title">Опыт</h2>
-          <div class="profile-grid">
-            <article class="profile-item">
-              <h3 class="profile-item-title">ООО NAUKA</h3>
-              <p class="profile-item-role">дизайнер</p>
-              <div class="profile-date">2024–2026</div>
-            </article>
-            <article class="profile-item">
-              <h3 class="profile-item-title">СМ Клиника</h3>
-              <p class="profile-item-role">дизайнер</p>
-              <div class="profile-date">2023–2024</div>
-            </article>
-            <article class="profile-item">
-              <h3 class="profile-item-title">ООО Эталон Проект</h3>
-              <p class="profile-item-role">дизайнер</p>
-              <div class="profile-date">2021–2023</div>
-            </article>
-          </div>
+        <div><h3>Образование</h3>
+          <div class="about-item"><div><strong>ВХУТЕИН</strong><p>Санкт-Петербургский высший художественно-технический институт · Бакалавриат, дизайн</p></div><time>2024–2026</time></div>
+          <div class="about-item"><div><strong>Академия реставрации и дизайна</strong><p>Санкт-Петербургская академия реставрации и дизайна · Графический дизайнер</p></div><time>2019–2023</time></div>
         </div>
-
-        <div class="profile-section">
-          <h2 class="profile-title">Образование</h2>
-          <div class="profile-grid">
-            <article class="profile-item">
-              <h3 class="profile-item-title">
-                Санкт-Петербургский высший<br>художественно-технический институт (ВХУТЕИН)
-              </h3>
-              <p class="profile-item-role">Бакалавриат (дизайн)</p>
-              <div class="profile-date">2024–2026</div>
-            </article>
-            <article class="profile-item">
-              <h3 class="profile-item-title">
-                Санкт-Петербургская академия<br>Реставрации и дизайна (СПБ ГБПОУ АРД)
-              </h3>
-              <p class="profile-item-role">Графический дизайнер</p>
-              <div class="profile-date">2019–2023</div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <footer class="ag-site-footer ag-site-footer--home" id="contacts">
-        <div class="ag-site-footer__links">
-          <a class="ag-site-footer__pill" href="https://t.me/alexandra_grish1na" target="_blank" rel="noreferrer">telegram</a>
-          <a class="ag-site-footer__pill" href="mailto:ya@sasha-grishina.ru">ya@sasha-grishina.ru</a>
-        </div>
-
-        <div class="ag-site-footer__bottom">
-          <span>[ Aleksandra Grishina 2026 ]</span>
-          <a class="ag-site-footer__archive" href="https://dprofile.ru/aleksandra0" target="_blank" rel="noreferrer">
-            Архив работ на Dprofile
-          </a>
-        </div>
-      </footer>
-    </div>
-
-    <script src="home-redesign.js"></script>
-    <script src="portrait-gaze.js"></script>
-  </body>
+      </div>
+      <div class="about-actions"><a class="outline" href="aleksandra-grishina-ux-ui-resume.pdf" target="_blank" rel="noopener">Скачать резюме ↗</a><a class="outline" href="mailto:ya@sasha-grishina.ru">Написать мне ↗</a></div>
+    </section>
+  </section>
+</main>
+<script>
+  const base='';
+  const projects=[
+    {title:'Редизайн покупки экскурсии',category:'UX / UI · 01',url:'projects/open-gorod-new.html',image:'gallery-cover-01.webp',side:'right',z:-650},
+    {title:'Особняк Безобразовой',category:'Web / Storytelling · 02',url:'projects/osobnyak-bezobrazovoy.html',image:'gallery-cover-02.webp',side:'left',z:-1220},
+    {title:'Инфодень NAUKA',category:'Branding · 03',url:'projects/branding.html',image:'gallery-cover-03.webp',side:'right',z:-1790},
+    {title:'Фанзин «Переток»',category:'Print / Editorial · 04',url:'projects/fanzine.html',image:'gallery-cover-04.webp',side:'left',z:-2360},
+    {title:'Брендбук NAUKA',category:'Identity · 05',url:'projects/brendbook.html',image:'gallery-cover-05.webp',side:'right',z:-2930}
+  ];
+  const world=document.getElementById('world'),navlist=document.getElementById('navlist');
+  projects.forEach((p,i)=>{
+    const a=document.createElement('a');a.className='art plane';a.dataset.side=p.side;a.style.setProperty('--z',p.z+'px');a.href=base+p.url;a.setAttribute('aria-label','Открыть кейс: '+p.title);a.innerHTML=`<img src="${p.image}" alt="${p.title}" loading="eager" decoding="async" fetchpriority="high"><div class="plaque"><small>${String(i+1).padStart(2,'0')} / ${p.category}</small>${p.title} ↗</div>`;world.append(a);
+    const n=document.createElement('a');n.className='navitem';n.href=base+p.url;n.innerHTML=`<img src="${p.image}" alt="" loading="eager" decoding="async"><small>${p.category}</small><strong>${p.title} ↗</strong>`;navlist.append(n);
+  });
+  const area=document.getElementById('walk'),intro=document.getElementById('intro'),caption=document.getElementById('caption'),counter=document.getElementById('counter'),helper=document.getElementById('helper'),nextButton=document.getElementById('nextButton');
+  let progress=0,smooth=0;
+  const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+  function measure(){const max=area.offsetHeight-innerHeight;progress=clamp(scrollY/max,0,1);document.documentElement.style.setProperty('--progress',progress)}
+  addEventListener('scroll',measure,{passive:true});addEventListener('resize',measure);
+  function animate(){smooth+=(progress-smooth)*.085;const z=smooth*3100;world.style.transform=`translateZ(${z}px) translateY(${Math.sin(smooth*Math.PI*5)*8}px) rotateY(${Math.sin(smooth*Math.PI*4)*1.1}deg)`;const showIntro=clamp(1-smooth*9,0,1);intro.style.opacity=showIntro;intro.style.visibility=showIntro<.02?'hidden':'visible';helper.style.opacity=smooth>.06?'0':'1';const idx=clamp(Math.round((z-490)/570),0,4);const active=smooth>.17;counter.textContent=active?`${String(idx+1).padStart(2,'0')} / 05`:'00 / 05';caption.innerHTML=active?`<span style="color:#b5a7fa;font-size:.35em;letter-spacing:.14em;text-transform:uppercase">Работа ${String(idx+1).padStart(2,'0')}</span><br>${projects[idx].title}`:'';requestAnimationFrame(animate)}
+  nextButton.addEventListener('click',()=>{const stops=[0,.21,.4,.59,.78,.96];const target=stops.find(v=>v>progress+.025)??1;window.scrollTo({top:(area.offsetHeight-innerHeight)*target,behavior:'smooth'})});
+  const panel=document.getElementById('navpanel'),aboutPanel=document.getElementById('aboutPanel');
+  function toggle(which){panel.classList.toggle('open',which==='projects');aboutPanel.classList.toggle('open',which==='about');panel.setAttribute('aria-hidden',String(which!=='projects'));aboutPanel.setAttribute('aria-hidden',String(which!=='about'));document.body.style.overflow=which?'hidden':''}
+  document.getElementById('listButton').onclick=()=>toggle('projects');document.getElementById('closeButton').onclick=()=>toggle(null);
+  document.getElementById('aboutButton').onclick=()=>toggle('about');document.getElementById('closeAbout').onclick=()=>toggle(null);
+  addEventListener('keydown',e=>{if(e.key==='Escape')toggle(null)});
+  measure();
+  animate();
+</script>
+</body>
 </html>
