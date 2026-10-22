@@ -622,7 +622,7 @@
   z-index: 0;
   width: min(86rem, 74%);
   aspect-ratio: 2070 / 2062;
-  background: url("gradient.png") right bottom / contain no-repeat;
+  background: url("gradient.webp") right bottom / contain no-repeat;
   pointer-events: none;
 }
 
