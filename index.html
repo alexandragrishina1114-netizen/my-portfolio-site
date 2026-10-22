@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#161518" />
-  <meta name="description" content="Экспериментальная прогулка по портфолио Александры Гришиной" />
+  <meta name="description" content="Экспериментальная прогулка по портфолио" />
   <link rel="icon" href="6a6e5d98c50ccf20801c5069.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="6a6e5d98dfaeb6bba2785b0c.png" sizes="180x180" />
   <title>Александра Гришина — Gallery Walk</title>
@@ -55,14 +55,13 @@
       <div class="plane arch" style="--z:-780px"></div><div class="plane arch" style="--z:-1580px"></div><div class="plane arch" style="--z:-2380px"></div>
       <div class="plane light" style="--z:-300px"></div><div class="plane light" style="--z:-1100px"></div><div class="plane light" style="--z:-1900px"></div><div class="plane light" style="--z:-2700px"></div>
     </div></div>
-    <div class="intro" id="intro"><div class="intro-inner"><div class="eyebrow">[ UX/UI designer ]</div><h1>Aleksandra<span>Grishina.</span></h1><p>В дизайне с 2021 года<br>B2C · B2B</p></div></div>
+    <div class="intro" id="intro"><div class="intro-inner"><div class="eyebrow">[ UX/UI designer ]</div><h1>Aleksandra<span>Grishina</span></h1><p>В дизайне с 2021 года<br>B2C · B2B · Saas</p></div></div>
     <div class="focus-dot"></div>
     <div class="hud"><div class="top"><a class="brand" href="#walk">[aleksandra <span>grishina</span>]</a><div class="top-right"><button class="outline" id="aboutButton">Обо мне</button><button class="outline" id="listButton">Все проекты</button></div></div><div class="bottom"><div><div class="counter"><span id="counter">00 / 05</span><span class="line"><i></i></span></div><div class="scene-caption" id="caption"></div></div><button class="outline" id="nextButton">Дальше</button></div></div>
     <div class="helper" id="helper"><span class="wheel"></span>Листай вниз, чтобы идти</div>
-    <div class="mobile-message">Прототип • лучше всего смотреть на большом экране</div>
-    <div class="navpanel" id="navpanel" aria-hidden="true"><div class="navhead"><div class="eyebrow">[ 05 works ]</div><button class="outline" id="closeButton">Закрыть ✕</button></div><h2>Коллекция<br>проектов.</h2><div class="navlist" id="navlist"></div></div>
+    <div class="navpanel" id="navpanel" aria-hidden="true"><div class="navhead"><div class="eyebrow">[ 02 / Works ]</div><button class="outline" id="closeButton">Закрыть ✕</button></div><h2>Коллекция<br>проектов.</h2><div class="navlist" id="navlist"></div></div>
     <section class="about-panel" id="aboutPanel" aria-label="Обо мне" aria-hidden="true">
-      <div class="navhead"><span class="eyebrow">[ 01 / About the designer ]</span><button class="outline" id="closeAbout">Закрыть ✕</button></div>
+      <div class="navhead"><span class="eyebrow">[ 01 / About me ]</span><button class="outline" id="closeAbout">Закрыть ✕</button></div>
       <h2>Обо <span style="color:#b6a5ff">мне.</span></h2>
       <p class="about-lead">Превращаю сложные задачи в понятные цифровые продукты: разбираю пользовательские сценарии, продумываю структуру, собираю прототипы и довожу интерфейс до&nbsp;цельного визуального языка.</p>
       <div class="about-grid">
@@ -83,11 +82,11 @@
 <script>
   const base='';
   const projects=[
-    {title:'Редизайн покупки экскурсии',category:'UX / UI · 01',url:'projects/open-gorod-new.html',image:'gallery-cover-01.webp',side:'right',z:-650},
-    {title:'Особняк Безобразовой',category:'Web / Storytelling · 02',url:'projects/osobnyak-bezobrazovoy.html',image:'gallery-cover-02.webp',side:'left',z:-1220},
-    {title:'Инфодень NAUKA',category:'Branding · 03',url:'projects/branding.html',image:'gallery-cover-03.webp',side:'right',z:-1790},
-    {title:'Фанзин «Переток»',category:'Print / Editorial · 04',url:'projects/fanzine.html',image:'gallery-cover-04.webp',side:'left',z:-2360},
-    {title:'Брендбук NAUKA',category:'Identity · 05',url:'projects/brendbook.html',image:'gallery-cover-05.webp',side:'right',z:-2930}
+    {title:'Редизайн покупки экскурсии',category:'UX / UI',url:'projects/open-gorod-new.html',image:'gallery-cover-01.webp',side:'right',z:-650},
+    {title:'Особняк Безобразовой',category:'Web / Storytelling',url:'projects/osobnyak-bezobrazovoy.html',image:'gallery-cover-02.webp',side:'left',z:-1220},
+    {title:'Инфодень NAUKA',category:'Branding',url:'projects/branding.html',image:'gallery-cover-03.webp',side:'right',z:-1790},
+    {title:'Фанзин «Переток»',category:'Print / Editorial',url:'projects/fanzine.html',image:'gallery-cover-04.webp',side:'left',z:-2360},
+    {title:'Брендбук NAUKA',category:'Identity',url:'projects/brendbook.html',image:'gallery-cover-05.webp',side:'right',z:-2930}
   ];
   const world=document.getElementById('world'),navlist=document.getElementById('navlist');
   projects.forEach((p,i)=>{
