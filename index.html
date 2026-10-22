@@ -33,7 +33,7 @@
     .plaque{position:absolute;top:calc(100% + 15px);left:0;width:100%;background:#242127ee;padding:11px 16px;border:1px solid #ffffff24;color:#fff;font-size:15px;font-weight:600;letter-spacing:-.02em;line-height:1.4;box-shadow:0 10px 35px #120f1399}
     .plaque small{display:block;color:#bdb4bf;font-weight:500;font-size:10px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:3px}
     .hud{position:absolute;inset:0;z-index:10;pointer-events:none;display:flex;flex-direction:column;justify-content:space-between;padding:31px clamp(20px,4.5vw,75px)}.hud>*{pointer-events:auto}
-    .top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.brand{font-weight:800;font-size:16px;letter-spacing:-.035em;text-decoration:none}
+    .top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.brand{font-weight:800;font-size:16px;letter-spacing:-.035em;text-decoration:none}.brand span{color:var(--violet)}
     .top-right{display:flex;align-items:center;gap:12px}.micro{font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:#e8e2e6b0}.outline{color:#fff;background:#302a34bd;border:1px solid #ffffff59;border-radius:100px;padding:11px 18px;font-size:11px;font-weight:700;transition:background .2s}.outline:hover{background:#6353ac}
     .bottom{display:flex;align-items:end;justify-content:space-between;gap:20px}.counter{font-size:11px;letter-spacing:.2em;color:#d7ccdd;text-transform:uppercase;display:flex;align-items:center;gap:13px}.line{width:130px;height:2px;background:#ffffff38;display:block;position:relative}.line i{position:absolute;left:0;top:0;height:100%;background:var(--violet);width:calc(var(--progress)*100%)}
     .scene-caption{font-size:clamp(25px,4.2vw,61px);letter-spacing:-.065em;font-weight:700;max-width:600px;line-height:1.06;text-shadow:0 3px 30px #120f12;transition:opacity .3s;pointer-events:none}.scene-caption em{font-style:normal;color:#bdb1ff}
@@ -57,14 +57,14 @@
     </div></div>
     <div class="intro" id="intro"><div class="intro-inner"><div class="eyebrow">[ UX/UI designer ]</div><h1>Aleksandra<span>Grishina.</span></h1><p>В дизайне с 2021 года<br>B2C · B2B</p></div></div>
     <div class="focus-dot"></div>
-    <div class="hud"><div class="top"><a class="brand" href="#walk">[aleksandra grishina]</a><div class="top-right"><button class="outline" id="aboutButton">Обо мне</button><button class="outline" id="listButton">Все проекты</button></div></div><div class="bottom"><div><div class="counter"><span id="counter">00 / 05</span><span class="line"><i></i></span></div><div class="scene-caption" id="caption"></div></div><button class="outline" id="nextButton">Дальше</button></div></div>
+    <div class="hud"><div class="top"><a class="brand" href="#walk">[aleksandra <span>grishina</span>]</a><div class="top-right"><button class="outline" id="aboutButton">Обо мне</button><button class="outline" id="listButton">Все проекты</button></div></div><div class="bottom"><div><div class="counter"><span id="counter">00 / 05</span><span class="line"><i></i></span></div><div class="scene-caption" id="caption"></div></div><button class="outline" id="nextButton">Дальше</button></div></div>
     <div class="helper" id="helper"><span class="wheel"></span>Листай вниз, чтобы идти</div>
     <div class="mobile-message">Прототип • лучше всего смотреть на большом экране</div>
-    <div class="navpanel" id="projects" aria-hidden="true"><div class="navhead"><div class="eyebrow">[ 05 works ]</div><button class="outline" id="closeButton">Закрыть ✕</button></div><h2>Коллекция<br>проектов.</h2><div class="navlist" id="navlist"></div></div>
-    <section class="about-panel" id="about" aria-label="Обо мне" aria-hidden="true">
+    <div class="navpanel" id="navpanel" aria-hidden="true"><div class="navhead"><div class="eyebrow">[ 05 works ]</div><button class="outline" id="closeButton">Закрыть ✕</button></div><h2>Коллекция<br>проектов.</h2><div class="navlist" id="navlist"></div></div>
+    <section class="about-panel" id="aboutPanel" aria-label="Обо мне" aria-hidden="true">
       <div class="navhead"><span class="eyebrow">[ 01 / About the designer ]</span><button class="outline" id="closeAbout">Закрыть ✕</button></div>
       <h2>Обо <span style="color:#b6a5ff">мне.</span></h2>
-      <p class="about-lead">Превращаю сложные задачи в понятные цифровые продукты: разбираю пользовательские сценарии, продумываю структуру, собираю прототипы и довожу интерфейс до цельного визуального языка.</p>
+      <p class="about-lead">Превращаю сложные задачи в понятные цифровые продукты: разбираю пользовательские сценарии, продумываю структуру, собираю прототипы и довожу интерфейс до&nbsp;цельного визуального языка.</p>
       <div class="about-grid">
         <div><h3>Опыт</h3>
           <div class="about-item"><div><strong>ООО NAUKA</strong><p>Дизайнер</p></div><time>2024–2026</time></div>
@@ -91,7 +91,7 @@
   ];
   const world=document.getElementById('world'),navlist=document.getElementById('navlist');
   projects.forEach((p,i)=>{
-    const a=document.createElement('a');a.className='art plane';a.dataset.side=p.side;a.style.setProperty('--z',p.z+'px');a.href=base+p.url;a.setAttribute('aria-label','Открыть проект: '+p.title);a.innerHTML=`<img src="${p.image}" alt="${p.title}" loading="eager" decoding="async" fetchpriority="high"><div class="plaque"><small>${String(i+1).padStart(2,'0')} / ${p.category}</small>${p.title}</div>`;world.append(a);
+    const a=document.createElement('a');a.className='art plane';a.dataset.side=p.side;a.style.setProperty('--z',p.z+'px');a.href=base+p.url;a.setAttribute('aria-label','Открыть кейс: '+p.title);a.innerHTML=`<img src="${p.image}" alt="${p.title}" loading="eager" decoding="async" fetchpriority="high"><div class="plaque"><small>${String(i+1).padStart(2,'0')} / ${p.category}</small>${p.title}</div>`;world.append(a);
     const n=document.createElement('a');n.className='navitem';n.href=base+p.url;n.innerHTML=`<img src="${p.image}" alt="" loading="eager" decoding="async"><small>${p.category}</small><strong>${p.title}</strong>`;navlist.append(n);
   });
   const area=document.getElementById('walk'),intro=document.getElementById('intro'),caption=document.getElementById('caption'),counter=document.getElementById('counter'),helper=document.getElementById('helper'),nextButton=document.getElementById('nextButton');
@@ -101,14 +101,10 @@
   addEventListener('scroll',measure,{passive:true});addEventListener('resize',measure);
   function animate(){smooth+=(progress-smooth)*.085;const z=smooth*3100;world.style.transform=`translateZ(${z}px) translateY(${Math.sin(smooth*Math.PI*5)*8}px) rotateY(${Math.sin(smooth*Math.PI*4)*1.1}deg)`;const showIntro=clamp(1-smooth*9,0,1);intro.style.opacity=showIntro;intro.style.visibility=showIntro<.02?'hidden':'visible';helper.style.opacity=smooth>.06?'0':'1';const idx=clamp(Math.round((z-490)/570),0,4);const active=smooth>.17;counter.textContent=active?`${String(idx+1).padStart(2,'0')} / 05`:'00 / 05';caption.innerHTML=active?`<span style="color:#b5a7fa;font-size:.35em;letter-spacing:.14em;text-transform:uppercase">Работа ${String(idx+1).padStart(2,'0')}</span><br>${projects[idx].title}`:'';requestAnimationFrame(animate)}
   nextButton.addEventListener('click',()=>{const stops=[0,.21,.4,.59,.78,.96];const target=stops.find(v=>v>progress+.025)??1;window.scrollTo({top:(area.offsetHeight-innerHeight)*target,behavior:'smooth'})});
-  const panel=document.getElementById('projects'),aboutPanel=document.getElementById('about');
+  const panel=document.getElementById('navpanel'),aboutPanel=document.getElementById('aboutPanel');
   function toggle(which){panel.classList.toggle('open',which==='projects');aboutPanel.classList.toggle('open',which==='about');panel.setAttribute('aria-hidden',String(which!=='projects'));aboutPanel.setAttribute('aria-hidden',String(which!=='about'));document.body.style.overflow=which?'hidden':''}
-  function openSection(which){history.replaceState(null,'',`#${which}`);toggle(which)}
-  function closeSection(){history.replaceState(null,'',location.pathname+location.search);toggle(null)}
-  function openFromHash(){toggle(location.hash==='#projects'?'projects':location.hash==='#about'?'about':null)}
-  document.getElementById('listButton').onclick=()=>openSection('projects');document.getElementById('closeButton').onclick=closeSection;
-  document.getElementById('aboutButton').onclick=()=>openSection('about');document.getElementById('closeAbout').onclick=closeSection;
-  addEventListener('hashchange',openFromHash);openFromHash();
+  document.getElementById('listButton').onclick=()=>toggle('projects');document.getElementById('closeButton').onclick=()=>toggle(null);
+  document.getElementById('aboutButton').onclick=()=>toggle('about');document.getElementById('closeAbout').onclick=()=>toggle(null);
   addEventListener('keydown',e=>{if(e.key==='Escape')toggle(null)});
   measure();
   animate();
