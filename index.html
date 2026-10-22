@@ -57,7 +57,7 @@
     </div></div>
     <div class="intro" id="intro"><div class="intro-inner"><div class="eyebrow">[ UX/UI designer ]</div><h1>Aleksandra<span>Grishina.</span></h1><p>В дизайне с 2021 года<br>B2C · B2B</p></div></div>
     <div class="focus-dot"></div>
-    <div class="hud"><div class="top"><a class="brand" href="#walk">[aleksandra <span>grishina</span>]</a><div class="top-right"><button class="outline" id="aboutButton">Обо мне</button><button class="outline" id="listButton">Все проекты ↗</button></div></div><div class="bottom"><div><div class="counter"><span id="counter">00 / 05</span><span class="line"><i></i></span></div><div class="scene-caption" id="caption"></div></div><button class="outline" id="nextButton">Дальше ↓</button></div></div>
+    <div class="hud"><div class="top"><a class="brand" href="#walk">[aleksandra <span>grishina</span>]</a><div class="top-right"><button class="outline" id="aboutButton">Обо мне</button><button class="outline" id="listButton">Все проекты</button></div></div><div class="bottom"><div><div class="counter"><span id="counter">00 / 05</span><span class="line"><i></i></span></div><div class="scene-caption" id="caption"></div></div><button class="outline" id="nextButton">Дальше</button></div></div>
     <div class="helper" id="helper"><span class="wheel"></span>Листай вниз, чтобы идти</div>
     <div class="mobile-message">Прототип • лучше всего смотреть на большом экране</div>
     <div class="navpanel" id="navpanel" aria-hidden="true"><div class="navhead"><div class="eyebrow">[ 05 works ]</div><button class="outline" id="closeButton">Закрыть ✕</button></div><h2>Коллекция<br>проектов.</h2><div class="navlist" id="navlist"></div></div>
@@ -76,7 +76,7 @@
           <div class="about-item"><div><strong>Академия реставрации и дизайна</strong><p>Санкт-Петербургская академия реставрации и дизайна · Графический дизайнер</p></div><time>2019–2023</time></div>
         </div>
       </div>
-      <div class="about-actions"><a class="outline" href="aleksandra-grishina-ux-ui-resume.pdf" target="_blank" rel="noopener">Скачать резюме ↗</a><a class="outline" href="mailto:ya@sasha-grishina.ru">Написать мне ↗</a></div>
+      <div class="about-actions"><a class="outline" href="aleksandra-grishina-ux-ui-resume.pdf" target="_blank" rel="noopener">Скачать резюме</a><a class="outline" href="mailto:ya@sasha-grishina.ru">Написать мне</a></div>
     </section>
   </section>
 </main>
@@ -91,8 +91,8 @@
   ];
   const world=document.getElementById('world'),navlist=document.getElementById('navlist');
   projects.forEach((p,i)=>{
-    const a=document.createElement('a');a.className='art plane';a.dataset.side=p.side;a.style.setProperty('--z',p.z+'px');a.href=base+p.url;a.setAttribute('aria-label','Открыть кейс: '+p.title);a.innerHTML=`<img src="${p.image}" alt="${p.title}" loading="eager" decoding="async" fetchpriority="high"><div class="plaque"><small>${String(i+1).padStart(2,'0')} / ${p.category}</small>${p.title} ↗</div>`;world.append(a);
-    const n=document.createElement('a');n.className='navitem';n.href=base+p.url;n.innerHTML=`<img src="${p.image}" alt="" loading="eager" decoding="async"><small>${p.category}</small><strong>${p.title} ↗</strong>`;navlist.append(n);
+    const a=document.createElement('a');a.className='art plane';a.dataset.side=p.side;a.style.setProperty('--z',p.z+'px');a.href=base+p.url;a.setAttribute('aria-label','Открыть кейс: '+p.title);a.innerHTML=`<img src="${p.image}" alt="${p.title}" loading="eager" decoding="async" fetchpriority="high"><div class="plaque"><small>${String(i+1).padStart(2,'0')} / ${p.category}</small>${p.title}</div>`;world.append(a);
+    const n=document.createElement('a');n.className='navitem';n.href=base+p.url;n.innerHTML=`<img src="${p.image}" alt="" loading="eager" decoding="async"><small>${p.category}</small><strong>${p.title}</strong>`;navlist.append(n);
   });
   const area=document.getElementById('walk'),intro=document.getElementById('intro'),caption=document.getElementById('caption'),counter=document.getElementById('counter'),helper=document.getElementById('helper'),nextButton=document.getElementById('nextButton');
   let progress=0,smooth=0;
