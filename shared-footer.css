@@ -170,6 +170,11 @@
   color: #dedede;
 }
 
+/* The storytelling case is now the final project in the UX/UI portfolio. */
+.body-3 .next-project {
+  display: none !important;
+}
+
 @media screen and (max-width: 479px) {
   .site-header,
   .site-header--home {

@@ -12,7 +12,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
     :root{font-family:Manrope,Arial,sans-serif;color:#f6f3ef;background:#171518;--violet:#b3a4ff;--progress:0}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}button,a{font:inherit}button{cursor:pointer}a{color:inherit}
-    .scroll-area{height:720vh}.viewport{position:sticky;top:0;height:100svh;overflow:hidden;background:#171518;isolation:isolate}
+    .scroll-area{height:390vh}.viewport{position:sticky;top:0;height:100svh;overflow:hidden;background:#171518;isolation:isolate}
     .viewport:before{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:radial-gradient(ellipse at 50% 47%,transparent 26%,#100f13bb 100%)}
     .viewport:after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E")}
     .space{position:absolute;inset:0;perspective:900px;perspective-origin:50% 50%;overflow:hidden}
@@ -57,7 +57,7 @@
     </div></div>
     <div class="intro" id="intro"><div class="intro-inner"><div class="eyebrow">[ UX/UI designer ]</div><h1>Aleksandra<span>Grishina</span></h1><p>В дизайне с 2021 года<br>B2C · B2B</p></div></div>
     <div class="focus-dot"></div>
-    <div class="hud"><div class="top"><a class="brand" href="#walk">[aleksandra <span>grishina</span>]</a><div class="top-right"><button class="outline" id="aboutButton">Обо мне</button><button class="outline" id="listButton">Все проекты</button></div></div><div class="bottom"><div><div class="counter"><span id="counter">00 / 05</span><span class="line"><i></i></span></div><div class="scene-caption" id="caption"></div></div><button class="outline" id="nextButton">Дальше</button></div></div>
+    <div class="hud"><div class="top"><a class="brand" href="#walk">[aleksandra <span>grishina</span>]</a><div class="top-right"><button class="outline" id="aboutButton">Обо мне</button><button class="outline" id="listButton">Все проекты</button></div></div><div class="bottom"><div><div class="counter"><span id="counter">00 / 02</span><span class="line"><i></i></span></div><div class="scene-caption" id="caption"></div></div><button class="outline" id="nextButton">Дальше</button></div></div>
     <div class="helper" id="helper"><span class="wheel"></span>Листай вниз, чтобы идти</div>
     <div class="navpanel" id="navpanel" aria-hidden="true"><div class="navhead"><div class="eyebrow">[ 02 / Works ]</div><button class="outline" id="closeButton">Закрыть ✕</button></div><h2>Коллекция<br>проектов.</h2><div class="navlist" id="navlist"></div></div>
     <section class="about-panel" id="aboutPanel" aria-label="Обо мне" aria-hidden="true">
@@ -83,10 +83,7 @@
   const base='';
   const projects=[
     {title:'Редизайн покупки экскурсии',category:'UX / UI',url:'projects/open-gorod-new.html',image:'gallery-cover-01.webp',side:'right',z:-650},
-    {title:'Особняк Безобразовой',category:'Web / Storytelling',url:'projects/osobnyak-bezobrazovoy.html',image:'gallery-cover-02.webp',side:'left',z:-1220},
-    {title:'Инфодень NAUKA',category:'Branding',url:'projects/branding.html',image:'gallery-cover-03.webp',side:'right',z:-1790},
-    {title:'Фанзин «Переток»',category:'Print / Editorial',url:'projects/fanzine.html',image:'gallery-cover-04.webp',side:'left',z:-2360},
-    {title:'Брендбук NAUKA',category:'Identity',url:'projects/brendbook.html',image:'gallery-cover-05.webp',side:'right',z:-2930}
+    {title:'Особняк Безобразовой',category:'Web / Storytelling',url:'projects/osobnyak-bezobrazovoy.html',image:'gallery-cover-02.webp',side:'left',z:-1220}
   ];
   const world=document.getElementById('world'),navlist=document.getElementById('navlist');
   projects.forEach((p,i)=>{
@@ -98,8 +95,8 @@
   const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
   function measure(){const max=area.offsetHeight-innerHeight;progress=clamp(scrollY/max,0,1);document.documentElement.style.setProperty('--progress',progress)}
   addEventListener('scroll',measure,{passive:true});addEventListener('resize',measure);
-  function animate(){smooth+=(progress-smooth)*.085;const z=smooth*3100;world.style.transform=`translateZ(${z}px) translateY(${Math.sin(smooth*Math.PI*5)*8}px) rotateY(${Math.sin(smooth*Math.PI*4)*1.1}deg)`;const showIntro=clamp(1-smooth*9,0,1);intro.style.opacity=showIntro;intro.style.visibility=showIntro<.02?'hidden':'visible';helper.style.opacity=smooth>.06?'0':'1';const idx=clamp(Math.round((z-490)/570),0,4);const active=smooth>.17;counter.textContent=active?`${String(idx+1).padStart(2,'0')} / 05`:'00 / 05';caption.innerHTML=active?`<span style="color:#b5a7fa;font-size:.35em;letter-spacing:.14em;text-transform:uppercase">Работа ${String(idx+1).padStart(2,'0')}</span><br>${projects[idx].title}`:'';requestAnimationFrame(animate)}
-  nextButton.addEventListener('click',()=>{const stops=[0,.21,.4,.59,.78,.96];const target=stops.find(v=>v>progress+.025)??1;window.scrollTo({top:(area.offsetHeight-innerHeight)*target,behavior:'smooth'})});
+  function animate(){smooth+=(progress-smooth)*.085;const z=smooth*1700;world.style.transform=`translateZ(${z}px) translateY(${Math.sin(smooth*Math.PI*3)*8}px) rotateY(${Math.sin(smooth*Math.PI*3)*1.1}deg)`;const showIntro=clamp(1-smooth*9,0,1);intro.style.opacity=showIntro;intro.style.visibility=showIntro<.02?'hidden':'visible';helper.style.opacity=smooth>.06?'0':'1';const idx=clamp(Math.round((z-490)/570),0,projects.length-1);const active=smooth>.17;const total=String(projects.length).padStart(2,'0');counter.textContent=active?`${String(idx+1).padStart(2,'0')} / ${total}`:`00 / ${total}`;caption.innerHTML=active?`<span style="color:#b5a7fa;font-size:.35em;letter-spacing:.14em;text-transform:uppercase">Работа ${String(idx+1).padStart(2,'0')}</span><br>${projects[idx].title}`:'';requestAnimationFrame(animate)}
+  nextButton.addEventListener('click',()=>{const stops=[0,.38,.82];const target=stops.find(v=>v>progress+.025)??1;window.scrollTo({top:(area.offsetHeight-innerHeight)*target,behavior:'smooth'})});
   const panel=document.getElementById('navpanel'),aboutPanel=document.getElementById('aboutPanel');
   function toggle(which){panel.classList.toggle('open',which==='projects');aboutPanel.classList.toggle('open',which==='about');panel.setAttribute('aria-hidden',String(which!=='projects'));aboutPanel.setAttribute('aria-hidden',String(which!=='about'));document.body.style.overflow=which?'hidden':''}
   document.getElementById('listButton').onclick=()=>toggle('projects');document.getElementById('closeButton').onclick=()=>toggle(null);
