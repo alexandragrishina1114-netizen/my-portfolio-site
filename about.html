@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Обо мне — Александра Гришина">
+  <link rel="icon" href="6a6e5d98c50ccf20801c5069.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="about.css">
+  <title>Обо мне — Александра Гришина</title>
+</head>
+<body>
+  <header class="about-header page-width">
+    <a class="about-logo" href="index.html" aria-label="На главную">[a]</a>
+    <nav class="about-nav" aria-label="Основная навигация">
+      <a href="index.html#projects">projects</a>
+      <a class="is-current" href="about.html" aria-current="page">about me</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-hero page-width" aria-label="Обо мне">
+      <img class="about-portrait" src="about-assets/portrait.png" alt="Портрет Александры" width="538" height="538">
+      <p class="about-manifesto">Я вижу мир маленькими<br>картинками квадратиками,<br>а еще вайбкожу ))</p>
+    </section>
+
+    <section class="career page-width" aria-label="Опыт и образование">
+      <div class="career-tabs" role="tablist" aria-label="Опыт и образование">
+        <button class="career-tab is-active" id="experience-tab" type="button" role="tab" aria-selected="true" aria-controls="experience-panel" data-panel="experience-panel">Experience</button>
+        <button class="career-tab" id="education-tab" type="button" role="tab" aria-selected="false" aria-controls="education-panel" data-panel="education-panel">Education</button>
+      </div>
+
+      <div class="career-panels">
+        <div class="career-panel is-active" id="experience-panel" role="tabpanel" aria-labelledby="experience-tab">
+          <div class="career-row">
+            <div><h2>ООО NAUKA</h2><p>designer</p></div><time>2024-2026</time>
+          </div>
+          <div class="career-row">
+            <div><h2>СМ-Клиника</h2><p>designer</p></div><time>2023-2024</time>
+          </div>
+          <div class="career-row">
+            <div><h2>ООО Эталон Проект</h2><p>designer</p></div><time>2021-2023</time>
+          </div>
+        </div>
+
+        <div class="career-panel" id="education-panel" role="tabpanel" aria-labelledby="education-tab" hidden>
+          <div class="career-row">
+            <div><h2>АНО ВО «ВХУТЕИН»</h2><p>Дизайн, бакалавр дизайна</p></div><time>2026</time>
+          </div>
+          <div class="career-row">
+            <div><h2>Академия реставрации и дизайна</h2><p>Дизайн, графический дизайнер</p></div><time>2023</time>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-story page-width">
+      <h1>Обо мне</h1>
+      <p>В детстве я красиво раскладывала подушки,<br>
+        и мама называла меня «дизайнером подушек».<br>
+        В подростковом возрасте папа показал мне<br>
+        пластилиновую анимацию — она вдохновила меня<br>
+        настолько, что я захотела стать мультипликатором.<br>
+        Позже я поняла: больше всего мне нравится<br>
+        находить порядок в сложном, добавлять ясность<br>
+        и делать вещи красивее. Так я пришла в дизайн.</p>
+    </section>
+
+    <section class="about-gallery page-width" aria-label="Личные фотографии и наблюдения">
+      <figure class="gallery-museum">
+        <img src="about-assets/museum.png" alt="Зеркальная скульптура на выставке" width="1036" height="1372">
+      </figure>
+      <figure class="gallery-bags">
+        <img src="about-assets/gift-bags.png" alt="Подарочные пакеты" width="734" height="978">
+        <figcaption>а вот это малая часть пакетов<br>с подарками на новый год,<br>которые я задизайнила</figcaption>
+      </figure>
+      <figure class="gallery-venice">
+        <figcaption>дизайн афиши<br>Венеция</figcaption>
+        <img src="about-assets/venice-posters.png" alt="Афиши в Венеции" width="420" height="548">
+      </figure>
+    </section>
+  </main>
+
+  <footer class="about-footer page-width" id="contact">
+    <a href="https://t.me/alexandra_grish1na" target="_blank" rel="noreferrer">telegram</a>
+    <a href="mailto:ya@sasha-grishina.ru">email</a>
+    <a href="https://dprofile.ru/aleksandra0" target="_blank" rel="noreferrer">Archive</a>
+  </footer>
+
+  <script src="about.js"></script>
+</body>
+</html>
