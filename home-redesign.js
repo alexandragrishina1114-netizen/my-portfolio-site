@@ -1,29 +1,30 @@
-const cards = Array.from(document.querySelectorAll(".case-card"));
-const mobileMenu = document.querySelector(".site-menu");
+const directions = document.querySelectorAll(".direction");
+const directionsBlock = document.querySelector(".directions");
+const directionArrow = document.querySelector(".direction-arrow");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-mobileMenu?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => mobileMenu.removeAttribute("open"));
-});
+directions.forEach((direction) => {
+  direction.addEventListener("click", () => {
+    const target = document.getElementById(direction.dataset.target);
+    if (!target) return;
 
-if (!("IntersectionObserver" in window)) {
-  cards.forEach((card) => card.classList.add("is-visible"));
-} else {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+    const isWeb = direction.textContent.trim().startsWith("Web");
+
+    directions.forEach((item) => item.classList.remove("is-active"));
+    direction.classList.add("is-active");
+    directionsBlock?.classList.toggle("has-active", isWeb);
+
+    if (directionArrow) {
+      directionArrow.classList.remove("is-drawing");
+      void directionArrow.getBoundingClientRect();
+      if (isWeb) directionArrow.classList.add("is-drawing");
+    }
+
+    window.setTimeout(() => {
+      target.scrollIntoView({
+        behavior: prefersReducedMotion.matches ? "auto" : "smooth",
+        block: "start",
       });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -6% 0px",
-    },
-  );
-
-  cards.forEach((card, index) => {
-    card.style.setProperty("--reveal-delay", `${(index % 2) * 55}ms`);
-    observer.observe(card);
+    }, prefersReducedMotion.matches || !isWeb ? 0 : 900);
   });
-}
+});
