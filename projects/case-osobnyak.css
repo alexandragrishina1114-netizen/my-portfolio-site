@@ -1,0 +1,201 @@
+/* Shared case layout, navigation, and reveal are in case-open-gorod.css. */
+@font-face {
+  font-family: 'Topelius Modern';
+  src: url('6970ef74d32368df232022e8_Topelius-Modern.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Doloman Pavljenko';
+  src: url('DolomanPavljenko.otf') format('opentype');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+.osobnyak-case .og-case-content :is(
+  .osobnyak-copy h2,
+  .og-hypotheses__title,
+  .og-interface__title,
+  .og-solution__title
+) {
+  font: 600 1.25rem/1.3 Montserrat, sans-serif;
+  letter-spacing: normal;
+}
+.osobnyak-case .og-case-content :is(.og-analysis__eyebrow, .og-interface__eyebrow) {
+  color: #797979;
+  font: 300 .9rem/1.3 Unbounded, sans-serif;
+  letter-spacing: normal;
+}
+.osobnyak-case .og-about { display: block; }
+.osobnyak-case .og-about .og-analysis__eyebrow { margin-bottom: 2rem; }
+.osobnyak-copy { max-width: 42rem; }
+.osobnyak-copy h2 { margin: 0 0 1rem; }
+.osobnyak-copy h2:not(:first-child) { margin-top: 3.5rem; }
+.osobnyak-copy p { margin: 0; font: 400 1.2rem/1.42 Montserrat, sans-serif; }
+.osobnyak-link { display: inline-block; margin-top: 2rem; padding: .65rem 1rem; border: 1px solid #5b55c6; border-radius: 100px; color: #5b55c6; font: 500 1rem/1.2 Montserrat, sans-serif; text-decoration: none; }
+.osobnyak-link:hover, .osobnyak-link:focus-visible { color: #fff; background: #5b55c6; }
+.osobnyak-case .og-hypotheses__title { margin-bottom: 2.5rem; }
+.osobnyak-case .og-case-content .og-hypotheses { padding-left: clamp(2rem, 4vw, 4rem); padding-right: clamp(2rem, 4vw, 4rem); }
+.osobnyak-case .og-hypothesis h3 { margin: 0 0 .8rem; font: 600 1.05rem/1.35 Montserrat, sans-serif; }
+.osobnyak-case .og-hypothesis p { margin: 0; font: inherit; }
+.osobnyak-case .osobnyak-screens { overflow: visible; background: #fff; color: #373737; }
+.osobnyak-screens::before { display: none; }
+.osobnyak-slider__viewport { display: flex; width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
+.osobnyak-slider__viewport::-webkit-scrollbar { display: none; }
+.osobnyak-slider figure { flex: 0 0 100%; width: 100%; height: min(72vh, 48rem); margin: 0; overflow-y: auto; scroll-snap-align: start; scrollbar-color: #b6b6b6 transparent; }
+.osobnyak-slider img { display: block; width: 100%; height: auto; border-radius: .5rem; }
+.osobnyak-slider figcaption { padding: .75rem 0 1.5rem; font: 500 .95rem/1.3 Montserrat, sans-serif; }
+.osobnyak-slider__controls { display: flex; align-items: center; justify-content: flex-end; gap: 1rem; margin: 1.25rem 0 2rem; }
+.osobnyak-slider__arrow { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; border: 1px solid #bdbdbd; border-radius: 50%; background: #fff; color: #373737; font: 400 1.4rem/1 Montserrat, sans-serif; cursor: pointer; }
+.osobnyak-slider__arrow:hover:not(:disabled), .osobnyak-slider__arrow:focus-visible { border-color: #5b55c6; color: #5b55c6; }
+.osobnyak-slider__arrow:disabled { opacity: .35; cursor: default; }
+.osobnyak-slider__counter { min-width: 4rem; text-align: center; font: 500 .9rem/1 Montserrat, sans-serif; }
+.osobnyak-mobile-reveal { margin: 1.5rem 0 0; }
+.osobnyak-mobile-reveal__window {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4.5% 8% clamp(5rem, 9vw, 8rem);
+  border-radius: clamp(1.5rem, 4vw, 3.5rem);
+  background: #eae8df;
+}
+.osobnyak-mobile-reveal__phones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 5%;
+}
+.osobnyak-mobile-reveal__phone {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+}
+.osobnyak-mobile-reveal__phone:nth-child(2) { top: clamp(1rem, 3vw, 3rem); }
+.osobnyak-mobile-reveal__phone:nth-child(3) { top: clamp(2rem, 6vw, 6rem); }
+.osobnyak-mobile-reveal__phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 1rem .9rem rgb(33 37 47 / 13%));
+}
+/* JavaScript sizes the scroll track to the panel plus a short animation distance. */
+.osobnyak-mobile-reveal.is-animated .osobnyak-mobile-reveal__window {
+  position: sticky;
+  top: clamp(1rem, 5vh, 3rem);
+  aspect-ratio: 1.85;
+  max-height: 72vh;
+  overflow: hidden;
+}
+.osobnyak-mobile-reveal.is-animated .osobnyak-mobile-reveal__phone {
+  transform: translate3d(0, var(--phone-shift, 0px), 0);
+  will-change: transform;
+}
+.osobnyak-identity { background: #fff; color: #373737; }
+.osobnyak-kit__title { margin: 1.5rem 0 1.75rem; font: 600 1.5rem/1.25 Montserrat, sans-serif; }
+.osobnyak-kit__fonts { border-top: 1px solid #d6d6d6; }
+.osobnyak-kit__meta, .osobnyak-kit__sample-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #aaa;
+  font: 500 .95rem/1.3 Montserrat, sans-serif;
+}
+.osobnyak-kit__meta { padding-top: 1rem; }
+.osobnyak-kit__families {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .2rem;
+  padding: 1.2rem 0 2.25rem;
+  color: #324797;
+  text-align: center;
+}
+.osobnyak-kit__topelius { font: 400 clamp(2.5rem, 6vw, 5.25rem)/1.25 'Topelius Modern', Georgia, serif; }
+.osobnyak-kit__doloman { font: 300 clamp(2.6rem, 6vw, 5.5rem)/1.2 'Doloman Pavljenko', sans-serif; }
+.osobnyak-kit__scale {
+  display: grid;
+  grid-template-columns: 1.15fr 1.15fr 1fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  padding: 1rem 0 1.4rem;
+  border-block: 1px solid #d6d6d6;
+}
+.osobnyak-kit__sample { min-width: 0; }
+.osobnyak-kit__sample-meta { margin-bottom: 1rem; }
+.osobnyak-kit__sample p { margin: 0; color: #324797; font-family: 'Doloman Pavljenko', sans-serif; font-weight: 300; line-height: 1.2; }
+.osobnyak-kit__h2 { font-size: 36px; }
+.osobnyak-kit__subheading { font-size: 24px; }
+.osobnyak-kit__body { font-size: 20px; }
+.osobnyak-kit__colors { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(.6rem, 2vw, 1.5rem); margin-top: 4rem; }
+.osobnyak-kit__color {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: .75rem;
+  min-width: 0;
+  aspect-ratio: .84;
+  padding: clamp(.8rem, 2vw, 1.5rem);
+  box-sizing: border-box;
+  border-radius: clamp(1rem, 2.5vw, 2rem);
+  color: #fff;
+  font: 400 clamp(.8rem, 1.5vw, 1.1rem)/1.2 Montserrat, sans-serif;
+}
+.osobnyak-kit__color small { font-size: .7em; opacity: .75; }
+.osobnyak-kit__color--blue { background: #324797; }
+.osobnyak-kit__color--red { background: #ac5837; }
+.osobnyak-kit__color--stone { background: #eae8df; color: #324797; }
+.osobnyak-kit__color--ultramarine { background: #a6bad2; }
+.osobnyak-video-section video { display: block; width: 100%; height: auto; margin-top: 2rem; border-radius: .5rem; background: #17284e; }
+.osobnyak-video-section p { margin: 1rem 0 0; font: 500 .95rem/1.35 Montserrat, sans-serif; }
+@media(max-width:767px) {
+  .osobnyak-case .og-case-content :is(
+    .osobnyak-copy h2,
+    .og-hypotheses__title,
+    .og-interface__title,
+    .og-solution__title
+  ) { font-size: 1.25rem !important; }
+  .osobnyak-case .og-case-content :is(.og-analysis__eyebrow, .og-interface__eyebrow) {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+  }
+  .osobnyak-slider figure { height: min(65vh, 38rem); }
+  .osobnyak-slider__controls { margin-bottom: 1rem; }
+  .osobnyak-mobile-reveal { margin-top: 1rem; }
+  .osobnyak-mobile-reveal__window { padding: 8% 5% 5rem; }
+  .osobnyak-mobile-reveal.is-animated .osobnyak-mobile-reveal__window {
+    aspect-ratio: auto;
+    height: min(58vh, 27rem);
+  }
+  .osobnyak-mobile-reveal.is-animated .osobnyak-mobile-reveal__phones {
+    width: 158%;
+    gap: 3%;
+    transform: translateX(-11%);
+  }
+  .osobnyak-mobile-reveal__phone:nth-child(2) { top: 2rem; }
+  .osobnyak-mobile-reveal__phone:nth-child(3) { top: 4rem; }
+  .osobnyak-copy p { font-size: 1rem; }
+  .osobnyak-case .og-hypothesis h3 { font-size: 1rem; }
+  .osobnyak-kit__title { margin-top: 1rem; }
+  .osobnyak-kit__meta { flex-wrap: wrap; }
+  .osobnyak-kit__scale { grid-template-columns: 1fr; gap: 1.4rem; }
+  .osobnyak-kit__sample-meta { justify-content: start; gap: 1rem; margin-bottom: .35rem; }
+  .osobnyak-kit__colors { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 2.5rem; }
+  .osobnyak-kit__color { aspect-ratio: .92; font-size: .85rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .osobnyak-slider__viewport { scroll-behavior: auto; }
+  .osobnyak-mobile-reveal.is-animated { height: auto; }
+  .osobnyak-mobile-reveal.is-animated .osobnyak-mobile-reveal__window {
+    position: static;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+  .osobnyak-mobile-reveal.is-animated .osobnyak-mobile-reveal__phone { transform: none; will-change: auto; }
+}
+@media(max-width:767px) and (prefers-reduced-motion:reduce) {
+  .osobnyak-mobile-reveal.is-animated .osobnyak-mobile-reveal__phones,
+  .osobnyak-mobile-reveal__phones { width: 100%; transform: none; grid-template-columns: 1fr; gap: 1.5rem; }
+  .osobnyak-mobile-reveal__phone:nth-child(n) { top: 0; }
+  .osobnyak-mobile-reveal__phone { max-width: 22rem; margin-inline: auto; }
+}
